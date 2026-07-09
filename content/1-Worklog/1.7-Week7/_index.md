@@ -16,7 +16,7 @@ Review all modules learned so far, deepen the Database section, and take a light
 | Saturday | 30/05/2026 | Reviewed Modules 03 and 04 on EC2 and storage solutions; quickly redid a few operations to reinforce memory | |
 | Sunday | 31/05/2026 | Thoroughly reviewed Module 06 (RDS, DynamoDB); made up a few hypothetical scenarios and practiced designing the corresponding DynamoDB schemas | |
 | Monday | 01/06/2026 | Reviewed Module 05 on security (IAM, KMS); went back over permission and encryption concepts | |
-| Tuesday | 02/06/2026 | Read an overview of Data Lake and Analytics services (AWS Glue, Athena, QuickSight); understood the role of each service in a data pipeline | awsstudygroup.com (Lab 35) |
+| Tuesday | 02/06/2026 | Read an overview of Data Lake and Analytics services (AWS Glue, Athena, QuickSight); understood the role of each service in a data pipeline | [awsstudygroup.com](https://cloudjourney.awsstudygroup.com/6-dataandanalytic/) |
 | Wednesday | 03/06/2026 | Studied the ETL (Extract-Transform-Load) flow in a Data Lake; since the Free Tier account had limits on some services, mostly focused on reading and understanding rather than full hands-on practice | |
 | Thursday | 04/06/2026 | Wrapped up the theory-and-practice learning phase; got mentally and technically ready to move into the group project phase | |
 

@@ -12,13 +12,13 @@ Attend the opening ceremony, create an AWS account, get familiar with Module 01 
 ### Tasks carried out this week:
 | Day | Date | Task | Reference Material |
 |---|---|---|---|
-| Friday | 17/04/2026 | Attended the AWS First Cloud Journey program's opening ceremony, learned the study roadmap and completion requirements; registered and set up an AWS account, got familiar with the AWS Management Console interface | awsstudygroup.com |
-| Saturday | 18/04/2026 | Carefully read the AWS Study Group's rules and orientation materials; discussed everyone's strengths with teammates and officially joined the project group | hcm-rules.awsfcaj.com |
-| Sunday | 19/04/2026 | Rewatched the Module 01 lecture videos, took notes on foundational concepts: the cloud computing model, service models (IaaS/PaaS/SaaS), and AWS's shared responsibility model | youtube (FCJ playlist) |
-| Monday | 20/04/2026 | Followed along hands-on: created the account, enabled multi-factor authentication (MFA) to secure the root account, created Admin and User groups in IAM and assigned appropriate permissions | youtube (FCJ playlist) |
-| Tuesday | 21/04/2026 | Spent extra time studying IAM (User, Group, Policy, Role) in depth since it's an important foundation but still hard to remember; tried creating and testing a few simple policies myself | youtube (FCJ playlist) |
-| Wednesday | 22/04/2026 | Learned about cost management and AWS Support plans; practiced creating AWS Budgets, setting up daily and per-service cost alerts to avoid exceeding the Free Tier | awsstudygroup.com (Lab 7) |
-| Thursday | 23/04/2026 | Reviewed all of Module 01, consolidated knowledge on accounts, IAM, and costs; previewed part of Module 02 on networking to prepare for next week | youtube (FCJ playlist) |
+| Friday | 17/04/2026 | Attended the AWS First Cloud Journey program's opening ceremony, learned the study roadmap and completion requirements; registered and set up an AWS account, got familiar with the AWS Management Console interface |  |
+| Saturday | 18/04/2026 | Carefully read the AWS Study Group's rules and orientation materials; discussed everyone's strengths with teammates and officially joined the project group | https://hcm-rules.awsfcaj.com/ |
+| Sunday | 19/04/2026 | Rewatched the Module 01 lecture videos, took notes on foundational concepts: the cloud computing model, service models (IaaS/PaaS/SaaS), and AWS's shared responsibility model | [youtube (FCJ playlist)](https://www.youtube.com/watch?v=HxYZAK1coOI&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=4) |
+| Monday | 20/04/2026 | Followed along hands-on: created the account, enabled multi-factor authentication (MFA) to secure the root account, created Admin and User groups in IAM and assigned appropriate permissions | [youtube (FCJ playlist)](https://www.youtube.com/watch?v=waR5S_lljrk&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=11) |
+| Tuesday | 21/04/2026 | Spent extra time studying IAM (User, Group, Policy, Role) in depth since it's an important foundation but still hard to remember; tried creating and testing a few simple policies myself | https://000002.awsstudygroup.com/vi/|
+| Wednesday | 22/04/2026 | Learned about cost management and AWS Support plans; practiced creating AWS Budgets, setting up daily and per-service cost alerts to avoid exceeding the Free Tier | [awsstudygroup.com (Lab 7)](https://www.youtube.com/watch?v=_a09nLVw6Sg&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=15) |
+| Thursday | 23/04/2026 | Reviewed all of Module 01, consolidated knowledge on accounts, IAM, and costs; previewed part of Module 02 on networking to prepare for next week |  |
 
 ### Week 1 Achievements:
 * Understood the program's rules, regulations, and full study roadmap.

@@ -16,7 +16,7 @@ pre: " <b> 1.7. </b> "
 | Thứ Bảy | 30/05/2026 | Ôn lại Module 03 và 04 về EC2 và các giải pháp lưu trữ; làm lại nhanh vài thao tác để nhớ lâu | |
 | Chủ Nhật | 31/05/2026 | Ôn kỹ Module 06 (RDS, DynamoDB); tự đặt ra vài tình huống giả định và luyện thiết kế schema DynamoDB tương ứng | |
 | Thứ Hai | 01/06/2026 | Ôn lại Module 05 về bảo mật (IAM, KMS); rà lại các khái niệm phân quyền và mã hóa | |
-| Thứ Ba | 02/06/2026 | Đọc tài liệu tổng quan về Data Lake và các dịch vụ Analytics (AWS Glue, Athena, QuickSight); hiểu vai trò của từng dịch vụ trong pipeline dữ liệu | awsstudygroup.com (Lab 35) |
+| Thứ Ba | 02/06/2026 | Đọc tài liệu tổng quan về Data Lake và các dịch vụ Analytics (AWS Glue, Athena, QuickSight); hiểu vai trò của từng dịch vụ trong pipeline dữ liệu | [awsstudygroup.com](https://cloudjourney.awsstudygroup.com/6-dataandanalytic/) |
 | Thứ Tư | 03/06/2026 | Tìm hiểu luồng ETL (Extract - Transform - Load) trong Data Lake; do tài khoản Free Tier bị giới hạn một số dịch vụ nên chủ yếu đọc hiểu thay vì thực hành đầy đủ | |
 | Thứ Năm | 04/06/2026 | Tổng kết giai đoạn học lý thuyết và thực hành; chuẩn bị tinh thần và kiến thức để bước sang giai đoạn làm dự án nhóm | |
 

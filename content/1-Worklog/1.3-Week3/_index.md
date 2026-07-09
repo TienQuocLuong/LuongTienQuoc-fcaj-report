@@ -12,12 +12,12 @@ Study the advanced labs of Module 02 (DNS Resolution, VPC Peering). Since networ
 ### Tasks carried out this week:
 | Day | Date | Task | Reference Material |
 |---|---|---|---|
-| Friday | 01/05/2026 | Watched the walkthroughs for Lab 10 (DNS Resolution) and Lab 19 (VPC Peering); took notes on the steps and prerequisites before practicing | youtube (FCJ playlist) |
+| Friday | 01/05/2026 | Watched the walkthroughs for Lab 10 (DNS Resolution) and Lab 19 (VPC Peering); took notes on the steps and prerequisites before practicing | https://www.youtube.com/watch?v=HACor1gL3ww&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=50  https://www.youtube.com/watch?v=sllYqAECBoM&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=56|
 | Saturday | 02/05/2026 | Rewatched both labs carefully, researched Route53 Resolver, Inbound Endpoint, and Private Hosted Zone beforehand to avoid confusion during practice | |
-| Sunday | 03/05/2026 | Started practicing Lab 10; the sample CloudFormation template failed to deploy, so had to research how to manually create the Inbound Endpoint instead of using the ready-made script | awsstudygroup.com (Lab 10) |
-| Monday | 04/05/2026 | Continued Lab 10: configured a Private Hosted Zone and associated it with the VPC to complete the internal DNS resolution part | awsstudygroup.com (Lab 10) |
-| Tuesday | 05/05/2026 | Finished Lab 10; read more material to fully understand how internal domain name resolution works within a VPC | awsstudygroup.com (Lab 10) |
-| Wednesday | 06/05/2026 | Practiced Lab 19 (VPC Peering): ran into an issue where two EC2 instances in two VPCs couldn't ping each other, used traceroute to trace and find the issue in the Route Table, then fixed it and connected successfully | awsstudygroup.com (Lab 19) |
+| Sunday | 03/05/2026 | Started practicing Lab 10; the sample CloudFormation template failed to deploy, so had to research how to manually create the Inbound Endpoint instead of using the ready-made script | https://www.youtube.com/watch?v=EQ-5P6U7Ph4&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=47 |
+| Monday | 04/05/2026 | Continued Lab 10: configured a Private Hosted Zone and associated it with the VPC to complete the internal DNS resolution part | https://www.youtube.com/watch?v=HACor1gL3ww&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=50 |
+| Tuesday | 05/05/2026 | Finished Lab 10; read more material to fully understand how internal domain name resolution works within a VPC | |
+| Wednesday | 06/05/2026 | Practiced Lab 19 (VPC Peering): ran into an issue where two EC2 instances in two VPCs couldn't ping each other, used traceroute to trace and find the issue in the Route Table, then fixed it and connected successfully | https://www.youtube.com/watch?v=sllYqAECBoM&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=56 |
 | Thursday | 07/05/2026 | Reviewed all the networking content learned; weighed the schedule and decided to set Lab 20 (Transit Gateway) aside to save time for later modules | |
 
 ### Week 3 Achievements:

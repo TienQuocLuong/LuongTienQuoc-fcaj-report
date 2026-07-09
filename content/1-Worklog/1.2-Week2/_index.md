@@ -12,12 +12,12 @@ Start Module 02 on virtual networking (VPC), learning each component slowly and 
 ### Tasks carried out this week:
 | Day | Date | Task | Reference Material |
 |---|---|---|---|
-| Friday | 24/04/2026 | Watched the Module 02 lecture on Amazon VPC; took notes on the overall network architecture and the role of each component (VPC, Subnet, Gateway, Route Table) | awsstudygroup.com (Lab 3) |
-| Saturday | 25/04/2026 | Practiced the VPC and Subnet creation part of Lab 3; looked things up along the way to understand CIDR addressing and distinguish Public/Private Subnets | awsstudygroup.com (Lab 3) |
-| Sunday | 26/04/2026 | Continued Lab 3: created an Internet Gateway and Route Table, configured routing so the Public Subnet could reach the internet; read more about VPC security | awsstudygroup.com (Lab 3) |
-| Monday | 27/04/2026 | Configured Security Groups for Public and Private; initially confused inbound and outbound direction, so redid it a few times and checked each rule carefully until it was clear | awsstudygroup.com (Lab 3) |
+| Friday | 24/04/2026 | Watched the Module 02 lecture on Amazon VPC; took notes on the overall network architecture and the role of each component (VPC, Subnet, Gateway, Route Table) | https://www.youtube.com/watch?v=BPuD1l2hEQ4&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=26 |
+| Saturday | 25/04/2026 | Practiced the VPC and Subnet creation part of Lab 3; looked things up along the way to understand CIDR addressing and distinguish Public/Private Subnets | [awsstudygroup.com (Lab 3) ](https://000003.awsstudygroup.com/vi/)|
+| Sunday | 26/04/2026 | Continued Lab 3: created an Internet Gateway and Route Table, configured routing so the Public Subnet could reach the internet; read more about VPC security | https://www.youtube.com/watch?v=dHoYmQR7FYs&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=30  https://www.youtube.com/watch?v=XBJgHS3XQjk&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=31 |
+| Monday | 27/04/2026 | Configured Security Groups for Public and Private; initially confused inbound and outbound direction, so redid it a few times and checked each rule carefully until it was clear | https://www.youtube.com/watch?v=COc_XxJwGYc&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=58 |
 | Tuesday | 28/04/2026 | Spent an entire session reviewing all the VPC components learned, drew the network diagram out on paper to solidify how the components connect to each other | |
-| Wednesday | 29/04/2026 | Practiced deploying EC2 inside the VPC and configuring an EC2 Instance Connect Endpoint to securely access an instance in the Private Subnet | awsstudygroup.com (Lab 3) |
+| Wednesday | 29/04/2026 | Practiced deploying EC2 inside the VPC and configuring an EC2 Instance Connect Endpoint to securely access an instance in the Private Subnet | [awsstudygroup.com (Lab 3)](https://000004.awsstudygroup.com/vi/) |
 | Thursday | 30/04/2026 | Verified network connectivity between EC2 instances in the VPC, confirmed Public/Private worked as designed; wrapped up the basic part of Module 02 | |
 
 ### Week 2 Achievements:
