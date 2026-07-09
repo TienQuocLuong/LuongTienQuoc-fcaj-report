@@ -1,59 +1,28 @@
 ---
 title: "Worklog Tuần 3"
-date: 2024-01-01
-weight: 1
+date: 2026-05-01
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu tuần:
+Học các lab nâng cao của Module 02 (DNS Resolution, VPC Peering). Do phần mạng khá khó nên chỉ tập trung một vài lab cốt lõi và làm thật kỹ.
 
-### Mục tiêu tuần 3:
-
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Công việc thực hiện trong tuần:
+| Thứ | Ngày | Công việc | Nguồn tài liệu |
+|---|---|---|---|
+| Thứ Sáu | 01/05/2026 | Xem hướng dẫn Lab 10 (DNS Resolution) và Lab 19 (VPC Peering); ghi chú các bước và điều kiện chuẩn bị trước khi thực hành | youtube (playlist FCJ) |
+| Thứ Bảy | 02/05/2026 | Xem lại kỹ hai lab, tìm hiểu trước về Route53 Resolver, Inbound Endpoint và Private Hosted Zone để không bị bỡ ngỡ khi làm | |
+| Chủ Nhật | 03/05/2026 | Bắt đầu thực hành Lab 10; template CloudFormation mẫu triển khai bị lỗi nên phải nghiên cứu cách tạo Inbound Endpoint thủ công thay vì dùng script sẵn | awsstudygroup.com (Lab 10) |
+| Thứ Hai | 04/05/2026 | Tiếp tục Lab 10: cấu hình Private Hosted Zone và liên kết với VPC để hoàn thành phần phân giải DNS nội bộ | awsstudygroup.com (Lab 10) |
+| Thứ Ba | 05/05/2026 | Hoàn thành Lab 10; đọc thêm tài liệu để hiểu rõ toàn bộ luồng phân giải tên miền nội bộ trong VPC hoạt động như thế nào | awsstudygroup.com (Lab 10) |
+| Thứ Tư | 06/05/2026 | Thực hành Lab 19 (VPC Peering): gặp lỗi hai EC2 ở hai VPC không ping được nhau, dùng công cụ traceroute để lần theo và phát hiện lỗi ở Route Table, sau đó sửa lại và kết nối thành công | awsstudygroup.com (Lab 19) |
+| Thứ Năm | 07/05/2026 | Ôn lại toàn bộ phần mạng đã học; cân nhắc tiến độ và quyết định tạm gác Lab 20 (Transit Gateway) để dành thời gian cho các module sau | |
 
 ### Kết quả đạt được tuần 3:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn thành Lab 10 (DNS Resolution) và Lab 19 (VPC Peering).
+* Tự xử lý được sự cố khi template CloudFormation lỗi bằng cách cấu hình thủ công Inbound Endpoint và Private Hosted Zone.
+* Hiểu được cơ chế phân giải DNS nội bộ trong VPC.
+* Biết cách dùng traceroute để chẩn đoán và khắc phục lỗi định tuyến trong VPC Peering.
+* Rèn được kỹ năng tự tra cứu, xử lý lỗi khi gặp tình huống không theo đúng hướng dẫn mẫu.

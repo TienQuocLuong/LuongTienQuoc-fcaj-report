@@ -1,59 +1,27 @@
 ---
 title: "Worklog Tuần 10"
-date: 2024-01-01
-weight: 2
+date: 2026-06-19
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu tuần:
+Hoàn thiện bản mô tả chi tiết và sơ đồ kiến trúc; tập trung thiết kế phần dữ liệu (DynamoDB) và tìm hiểu VPC Endpoint.
 
-### Mục tiêu tuần 10:
-
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Công việc thực hiện trong tuần:
+| Thứ | Ngày | Công việc | Nguồn tài liệu |
+|---|---|---|---|
+| Thứ Sáu | 19/06/2026 | Ôn lại các module và luyện vẽ thử một vài phương án sơ đồ kiến trúc cho hệ thống | |
+| Thứ Bảy | 20/06/2026 | Cùng nhóm soạn bản mô tả chi tiết đề tài; đóng góp phần thiết kế hai bảng DynamoDB dùng để lưu lịch sử test và log lỗi | |
+| Chủ Nhật | 21/06/2026 | Thiết kế schema chi tiết cho bảng playwright-test-history (Partition Key: task_id) và playwright-error-log (Partition Key: error_id), xác định rõ các trường và kiểu dữ liệu | |
+| Thứ Hai | 22/06/2026 | Cùng nhóm vẽ sơ đồ kiến trúc, xác định vị trí của DynamoDB trong hệ thống và các luồng đọc/ghi dữ liệu từ Lambda | |
+| Thứ Ba | 23/06/2026 | Rà soát lại các luồng kết nối dữ liệu, phát hiện và điều chỉnh những chỗ chưa hợp lý; bổ sung các dịch vụ liên quan đến phần mình phụ trách | |
+| Thứ Tư | 24/06/2026 | Cùng nhóm trình bày sơ đồ kiến trúc với mentor để được review; ghi nhận các điểm cần chỉnh sửa và thảo luận hướng khắc phục | |
+| Thứ Năm | 25/06/2026 | Nghiên cứu kỹ về VPC Endpoint: phân biệt Gateway Endpoint (cho S3, DynamoDB) và Interface Endpoint (cho ECR), chuẩn bị cho phần triển khai của mình | |
 
 ### Kết quả đạt được tuần 10:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Cùng nhóm hoàn thiện bản mô tả chi tiết và sơ đồ kiến trúc của hệ thống (gồm CloudFront, S3, Cognito, API Gateway, SQS, ECS Fargate, ECR, DynamoDB, Lambda, CloudWatch, Secrets Manager, VPC, SES).
+* Hoàn thành thiết kế schema chi tiết cho hai bảng DynamoDB thuộc phần việc của mình.
+* Tham gia rà soát và điều chỉnh các luồng dữ liệu trong kiến trúc.
+* Tìm hiểu kỹ và phân biệt được hai loại VPC Endpoint (Gateway và Interface), sẵn sàng cho giai đoạn triển khai.

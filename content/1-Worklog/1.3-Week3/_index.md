@@ -1,57 +1,28 @@
 ---
 title: "Week 3 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-01
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 3 Objectives:
+Study the advanced labs of Module 02 (DNS Resolution, VPC Peering). Since networking is fairly hard, focused on just a couple of core labs and did them very thoroughly.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
-
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Tasks carried out this week:
+| Day | Date | Task | Reference Material |
+|---|---|---|---|
+| Friday | 01/05/2026 | Watched the walkthroughs for Lab 10 (DNS Resolution) and Lab 19 (VPC Peering); took notes on the steps and prerequisites before practicing | youtube (FCJ playlist) |
+| Saturday | 02/05/2026 | Rewatched both labs carefully, researched Route53 Resolver, Inbound Endpoint, and Private Hosted Zone beforehand to avoid confusion during practice | |
+| Sunday | 03/05/2026 | Started practicing Lab 10; the sample CloudFormation template failed to deploy, so had to research how to manually create the Inbound Endpoint instead of using the ready-made script | awsstudygroup.com (Lab 10) |
+| Monday | 04/05/2026 | Continued Lab 10: configured a Private Hosted Zone and associated it with the VPC to complete the internal DNS resolution part | awsstudygroup.com (Lab 10) |
+| Tuesday | 05/05/2026 | Finished Lab 10; read more material to fully understand how internal domain name resolution works within a VPC | awsstudygroup.com (Lab 10) |
+| Wednesday | 06/05/2026 | Practiced Lab 19 (VPC Peering): ran into an issue where two EC2 instances in two VPCs couldn't ping each other, used traceroute to trace and find the issue in the Route Table, then fixed it and connected successfully | awsstudygroup.com (Lab 19) |
+| Thursday | 07/05/2026 | Reviewed all the networking content learned; weighed the schedule and decided to set Lab 20 (Transit Gateway) aside to save time for later modules | |
 
 ### Week 3 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Completed Lab 10 (DNS Resolution) and Lab 19 (VPC Peering).
+* Independently resolved an issue with a failed CloudFormation template by manually configuring the Inbound Endpoint and Private Hosted Zone.
+* Understood the internal DNS resolution mechanism within a VPC.
+* Learned to use traceroute to diagnose and fix routing errors in VPC Peering.
+* Developed the skill of researching and troubleshooting when things don't go exactly as the guide describes.

@@ -1,57 +1,28 @@
 ---
 title: "Week 2 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-04-24
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 2 Objectives:
+Start Module 02 on virtual networking (VPC), learning each component slowly and thoroughly to build a solid networking foundation.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
-
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Tasks carried out this week:
+| Day | Date | Task | Reference Material |
+|---|---|---|---|
+| Friday | 24/04/2026 | Watched the Module 02 lecture on Amazon VPC; took notes on the overall network architecture and the role of each component (VPC, Subnet, Gateway, Route Table) | awsstudygroup.com (Lab 3) |
+| Saturday | 25/04/2026 | Practiced the VPC and Subnet creation part of Lab 3; looked things up along the way to understand CIDR addressing and distinguish Public/Private Subnets | awsstudygroup.com (Lab 3) |
+| Sunday | 26/04/2026 | Continued Lab 3: created an Internet Gateway and Route Table, configured routing so the Public Subnet could reach the internet; read more about VPC security | awsstudygroup.com (Lab 3) |
+| Monday | 27/04/2026 | Configured Security Groups for Public and Private; initially confused inbound and outbound direction, so redid it a few times and checked each rule carefully until it was clear | awsstudygroup.com (Lab 3) |
+| Tuesday | 28/04/2026 | Spent an entire session reviewing all the VPC components learned, drew the network diagram out on paper to solidify how the components connect to each other | |
+| Wednesday | 29/04/2026 | Practiced deploying EC2 inside the VPC and configuring an EC2 Instance Connect Endpoint to securely access an instance in the Private Subnet | awsstudygroup.com (Lab 3) |
+| Thursday | 30/04/2026 | Verified network connectivity between EC2 instances in the VPC, confirmed Public/Private worked as designed; wrapped up the basic part of Module 02 | |
 
 ### Week 2 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Clearly understood and could independently configure the core VPC components: Subnet, Internet Gateway, Route Table, Security Group.
+* Distinguished Public Subnet from Private Subnet and understood how traffic routes to the internet.
+* Successfully deployed EC2 inside a VPC and used an Instance Connect Endpoint to securely access a Private instance.
+* Overcame initial confusion about Security Group inbound/outbound direction.
+* Built a solid networking foundation to move on to more advanced labs next week.

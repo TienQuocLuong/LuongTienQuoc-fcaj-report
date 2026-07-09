@@ -1,57 +1,28 @@
 ---
 title: "Week 12 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-07-03
+weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 12 Objectives:
+Deploy the infrastructure and assigned resources; work with the team to test the whole system.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
-
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Tasks carried out this week:
+| Day | Date | Task | Reference Material |
+|---|---|---|---|
+| Friday | 03/07/2026 | Worked with the team on a detailed deployment plan and configured the VPC network infrastructure (Subnet, Route Table, NAT Gateway, Security Groups) | |
+| Saturday | 04/07/2026 | Worked with the team to update and finalize the deployment plan and prepare resources (source code, system configuration files) | |
+| Sunday | 05/07/2026 | Directly created the two DynamoDB tables (playwright-test-history, playwright-error-log) per the designed schema; worked with the team to create two S3 buckets and two SQS queues (task queue and dead-letter queue) | |
+| Monday | 06/07/2026 | Created VPC Endpoints for S3 (Gateway type) and ECR (Interface type); verified an email on SES and sent a test email to confirm; helped the team configure Lambda functions and set up the EventBridge Scheduler | |
+| Tuesday | 07/07/2026 | (to be updated - testing the DynamoDB and SES parts in the end-to-end flow) | |
+| Wednesday | 08/07/2026 | (to be updated - testing the whole system, fixing configuration issues, writing the self-evaluation) | |
+| Thursday | 09/07/2026 | (to be updated - finalizing and submitting the internship report) | |
 
 ### Week 12 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Aligned with the team on the deployment plan and successfully configured the VPC network infrastructure.
+* Directly created and configured the two DynamoDB tables exactly per the designed schema.
+* Successfully created VPC Endpoints for S3 (Gateway) and ECR (Interface) for secure internal service communication.
+* Verified and successfully tested sending email via Amazon SES.
+* Worked with the team to create storage and queue resources (2 S3 buckets, 2 SQS queues including a DLQ), and supported deploying Lambda and the EventBridge Scheduler.

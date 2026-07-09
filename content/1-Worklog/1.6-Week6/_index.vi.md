@@ -1,58 +1,29 @@
 ---
 title: "Worklog Tuần 6"
-date: 2024-01-01
-weight: 1
+date: 2026-05-22
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu tuần (Trọng tâm: Database):
+Học sâu Module 06 về cơ sở dữ liệu (RDS, DynamoDB) — phần thế mạnh của bản thân, dành nhiều thời gian và thực hành kỹ nhất.
 
-### Mục tiêu tuần 6:
-
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Công việc thực hiện trong tuần:
+| Thứ | Ngày | Công việc | Nguồn tài liệu |
+|---|---|---|---|
+| Thứ Sáu | 22/05/2026 | Xem bài giảng Module 06 và đọc tài liệu chi tiết về Amazon RDS và Aurora; ghi chú so sánh các engine (MySQL, PostgreSQL, Aurora) và các khái niệm Multi-AZ, Read Replica | docs.aws.amazon.com/rds |
+| Thứ Bảy | 23/05/2026 | Thực hành Lab 05 (Amazon RDS): tạo RDS MySQL, cấu hình Security Group cho EC2 kết nối tới RDS, cài Node.js và MySQL client, triển khai ứng dụng Node.js; xử lý lỗi file .env rỗng và lỗi package mysql không tương thích bằng cách đổi sang mysql2, cuối cùng app chạy thành công và kết nối được RDS | awsstudygroup.com (Lab 5) |
+| Chủ Nhật | 24/05/2026 | Ôn lại truy vấn SQL từ cơ bản đến nâng cao (JOIN, GROUP BY, subquery, index) để phục vụ thao tác và tối ưu dữ liệu | |
+| Thứ Hai | 25/05/2026 | Tìm hiểu sâu về Amazon DynamoDB: mô hình NoSQL, khái niệm Partition Key và Sort Key, cách thiết kế bảng để truy vấn hiệu quả và tránh hot partition | docs.aws.amazon.com/dynamodb |
+| Thứ Ba | 26/05/2026 | Thực hành Lab 60 (DynamoDB): tạo bảng bằng AWS CLI, thực hiện đầy đủ các thao tác CRUD (thêm/đọc/sửa/xóa item), truy vấn dữ liệu bằng Query và Scan, phân biệt hai cách truy vấn này | awsstudygroup.com (Lab 60) |
+| Thứ Tư | 27/05/2026 | Tiếp tục Lab 60: tạo và truy vấn Global Secondary Index (GSI) để truy vấn theo thuộc tính không phải khóa chính; sau đó thao tác lại toàn bộ bằng Python SDK Boto3 | awsstudygroup.com (Lab 60) |
+| Thứ Năm | 28/05/2026 | Luyện thêm với Boto3: tự viết script tạo bảng, nạp dữ liệu mẫu, truy vấn và xóa item; đây là bước chuẩn bị nền tảng trực tiếp cho phần DynamoDB mình sẽ phụ trách trong dự án nhóm | |
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Nắm vững kiến thức cơ sở dữ liệu trên AWS: phân biệt được cơ sở dữ liệu quan hệ (RDS/Aurora) và NoSQL (DynamoDB) cùng trường hợp sử dụng.
+* Hoàn thành Lab 05: triển khai thành công ứng dụng Node.js kết nối RDS MySQL và tự xử lý được lỗi .env cùng lỗi tương thích package (chuyển sang mysql2).
+* Hoàn thành Lab 60: thành thạo thiết kế bảng, thao tác CRUD, truy vấn Query/Scan và tạo Global Secondary Index trên DynamoDB.
+* Thao tác thành thạo DynamoDB bằng cả AWS CLI và Python SDK Boto3.
+* Củng cố lại kỹ năng SQL từ cơ bản đến nâng cao.
+* Xây dựng được nền tảng vững chắc và trực tiếp cho vai trò phụ trách DynamoDB trong dự án nhóm.

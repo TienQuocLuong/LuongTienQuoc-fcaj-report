@@ -1,57 +1,28 @@
 ---
 title: "Week 8 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-06-05
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 8 Objectives:
+Start joining project idea discussions; continue reviewing and prepare to write a knowledge-sharing blog post.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
-
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Tasks carried out this week:
+| Day | Date | Task | Reference Material |
+|---|---|---|---|
+| Friday | 05/06/2026 | Thoroughly reviewed DynamoDB and Boto3 to be ready to contribute to the data part of the project | |
+| Saturday | 06/06/2026 | Read more AWS documentation and blog posts on serverless architecture patterns and real-world applications for project inspiration | aws.amazon.com/blogs |
+| Sunday | 07/06/2026 | Self-reviewed networking and security topics that still felt uncertain, to avoid gaps when working on the project | |
+| Monday | 08/06/2026 | Team meeting to discuss project ideas; researched material with the team to prepare an AWS knowledge-sharing blog post for the community page | aws.amazon.com/blogs |
+| Tuesday | 09/06/2026 | Learned about Playwright and running automated tests using Docker containers, to support the project direction the team was considering | |
+| Wednesday | 10/06/2026 | Researched how to use DynamoDB to store test history and system error logs, the part I planned to take on if this topic was finalized | |
+| Thursday | 11/06/2026 | Compiled personal notes on the project idea and drafted an initial outline of my anticipated role | |
 
 ### Week 8 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Aligned with the team on an initial project idea.
+* Proactively researched Playwright and running automated tests with Docker.
+* Researched in advance how to apply DynamoDB to store test history and error logs, preparing for my role.
+* Worked with the team to prepare content for the community blog post.
+* Reinforced weaker knowledge areas to confidently start the project phase.

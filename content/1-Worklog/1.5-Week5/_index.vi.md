@@ -1,59 +1,28 @@
 ---
 title: "Worklog Tuần 5"
-date: 2024-01-01
-weight: 1
+date: 2026-05-15
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu tuần:
+Học Module 05 về bảo mật; tập trung các lab IAM và mã hóa cơ bản, bỏ các lab IAM nâng cao.
 
-### Mục tiêu tuần 5:
-
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Công việc thực hiện trong tuần:
+| Thứ | Ngày | Công việc | Nguồn tài liệu |
+|---|---|---|---|
+| Thứ Sáu | 15/05/2026 | Xem bài giảng Module 05 về các dịch vụ bảo mật (IAM nâng cao, KMS); ghi chú các khái niệm về phân quyền và mã hóa | youtube (playlist FCJ) |
+| Thứ Bảy | 16/05/2026 | Thực hành Lab 48 (cấu hình IAM Role cho EC2 truy cập S3): thử cả hai cách — dùng Access/Secret Key và dùng IAM Role gắn trực tiếp vào EC2 — để so sánh mức độ an toàn | awsstudygroup.com (Lab 48) |
+| Chủ Nhật | 17/05/2026 | Ôn lại kiến thức IAM và làm lại Lab 48 để nắm chắc; hiểu rõ vì sao không nên hardcode Access Key trong ứng dụng | |
+| Thứ Hai | 18/05/2026 | Thực hành Lab 33 (mã hóa dữ liệu S3 với AWS KMS): tạo KMS Key, cấu hình mã hóa object trên S3 và kiểm tra quyền truy cập | awsstudygroup.com (Lab 33) |
+| Thứ Ba | 19/05/2026 | Tiếp tục tìm hiểu KMS: kiểm chứng rằng người dùng không có quyền với KMS Key thì không đọc được object dù đã có quyền truy cập S3 — hiểu KMS như một lớp kiểm soát bổ sung | awsstudygroup.com (Lab 33) |
+| Thứ Tư | 20/05/2026 | Thực hành Lab 08 (Amazon CloudWatch): quan sát Metrics, Logs, thiết lập Alarm và Dashboard cơ bản để giám sát tài nguyên | awsstudygroup.com (Lab 8) |
+| Thứ Năm | 21/05/2026 | Xem trước bài giảng Module 06 về cơ sở dữ liệu (RDS, Aurora); quyết định bỏ các lab IAM nâng cao (Lab 22, 28, 30, 44) để dồn thời gian cho phần Database là thế mạnh | youtube (playlist FCJ) |
 
 ### Kết quả đạt được tuần 5:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hiểu và thực hành được cơ chế phân quyền bằng IAM Role, nắm rõ rủi ro bảo mật của việc dùng Access Key trực tiếp.
+* Hoàn thành Lab 48, biết cách gắn IAM Role vào EC2 để truy cập S3 an toàn.
+* Hoàn thành Lab 33, cấu hình được mã hóa dữ liệu S3 bằng AWS KMS và quản lý quyền với KMS Key.
+* Hoàn thành Lab 08, biết giám sát hệ thống cơ bản bằng CloudWatch (Metrics, Logs, Alarm, Dashboard).
+* Chủ động lược bớt lab IAM nâng cao để dồn thời gian cho phần Database — nền tảng trực tiếp cho vai trò trong dự án.

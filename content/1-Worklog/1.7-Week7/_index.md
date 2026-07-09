@@ -1,57 +1,28 @@
 ---
 title: "Week 7 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-29
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 7 Objectives:
+Review all modules learned so far, deepen the Database section, and take a light look at Data & Analytics.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
-
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Tasks carried out this week:
+| Day | Date | Task | Reference Material |
+|---|---|---|---|
+| Friday | 29/05/2026 | Reviewed Modules 01 and 02 on cloud fundamentals and networking (VPC, Subnet, Route Table, Internet Gateway); consolidated networking concepts | |
+| Saturday | 30/05/2026 | Reviewed Modules 03 and 04 on EC2 and storage solutions; quickly redid a few operations to reinforce memory | |
+| Sunday | 31/05/2026 | Thoroughly reviewed Module 06 (RDS, DynamoDB); made up a few hypothetical scenarios and practiced designing the corresponding DynamoDB schemas | |
+| Monday | 01/06/2026 | Reviewed Module 05 on security (IAM, KMS); went back over permission and encryption concepts | |
+| Tuesday | 02/06/2026 | Read an overview of Data Lake and Analytics services (AWS Glue, Athena, QuickSight); understood the role of each service in a data pipeline | awsstudygroup.com (Lab 35) |
+| Wednesday | 03/06/2026 | Studied the ETL (Extract-Transform-Load) flow in a Data Lake; since the Free Tier account had limits on some services, mostly focused on reading and understanding rather than full hands-on practice | |
+| Thursday | 04/06/2026 | Wrapped up the theory-and-practice learning phase; got mentally and technically ready to move into the group project phase | |
 
 ### Week 7 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Consolidated all knowledge from Module 01 through Module 06, reinforcing the fundamentals of compute, storage, networking, security, and databases.
+* Further deepened the Database section through DynamoDB schema design exercises.
+* Grasped the overall Data Lake architecture and the role of Analytics services (Glue, Athena, QuickSight) at a theoretical level.
+* Understood the ETL flow in big data processing.
+* Ready, knowledge-wise, to move into the group project implementation phase.

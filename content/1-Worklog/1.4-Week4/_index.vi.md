@@ -1,59 +1,28 @@
 ---
 title: "Worklog Tuần 4"
-date: 2024-01-01
-weight: 1
+date: 2026-05-08
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu tuần:
+Học Module 03 và 04 về Amazon EC2 và các dịch vụ lưu trữ; chỉ làm các lab cơ bản, cốt lõi nhất.
 
-### Mục tiêu tuần 4:
-
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Công việc thực hiện trong tuần:
+| Thứ | Ngày | Công việc | Nguồn tài liệu |
+|---|---|---|---|
+| Thứ Sáu | 08/05/2026 | Xem bài giảng Module 03 về Amazon EC2: các loại instance, AMI, EBS và trường hợp sử dụng của từng loại | youtube (playlist FCJ) |
+| Thứ Bảy | 09/05/2026 | Thực hành Lab 04 (EC2): tạo EC2 Windows và Linux, cấu hình Security Group cho RDP/SSH, tải file Remote Desktop và kết nối thành công vào máy | awsstudygroup.com (Lab 4) |
+| Chủ Nhật | 10/05/2026 | Tiếp tục Lab 04: thực hành các thao tác quản lý EC2 cơ bản — thay đổi cấu hình instance, tạo Snapshot, tạo Custom AMI và khởi tạo instance mới từ AMI đó | awsstudygroup.com (Lab 4) |
+| Thứ Hai | 11/05/2026 | Xem bài giảng Module 04 về các giải pháp lưu trữ trên AWS (S3, EBS, EFS); phân biệt lưu trữ object, block và file | youtube (playlist FCJ) |
+| Thứ Ba | 12/05/2026 | Đọc thêm tài liệu về S3 (storage class, versioning) và EBS (loại volume); ghi chú bảng so sánh các loại lưu trữ để dễ ôn lại | docs.aws.amazon.com |
+| Thứ Tư | 13/05/2026 | Thực hành Lab 27 (quản lý tài nguyên bằng Tag và Resource Group), tổ chức tài nguyên theo nhóm dự án để dễ theo dõi và dọn dẹp, tránh sót tài nguyên gây tốn phí | awsstudygroup.com (Lab 27) |
+| Thứ Năm | 14/05/2026 | Ôn lại Module 03 và 04; cân nhắc tiến độ và quyết định bỏ bớt các lab nâng cao (Lab 13 AWS Backup, Lab 58 Session Manager) để tập trung phần cốt lõi | |
 
 ### Kết quả đạt được tuần 4:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn thành nội dung Module 03 và 04 về Amazon EC2 và các dịch vụ lưu trữ (S3, EBS, EFS).
+* Thành thạo Lab 04: tạo và kết nối EC2 Windows/Linux, cấu hình Security Group, tạo Snapshot và Custom AMI.
+* Hoàn thành Lab 27 về quản lý tài nguyên bằng Tag và Resource Group, hình thành thói quen tổ chức tài nguyên gọn gàng.
+* Phân biệt rõ các loại lưu trữ object/block/file và trường hợp sử dụng.
+* Chủ động cân đối tiến độ, lược bớt lab nâng cao chưa cần thiết để bám sát mục tiêu.

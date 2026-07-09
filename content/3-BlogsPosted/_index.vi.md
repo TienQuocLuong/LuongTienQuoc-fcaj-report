@@ -1,22 +1,18 @@
 ---
-title: "Các bài blogs đã đăng"
-date: 2024-01-01
+title: "Các bài Blogs đã đăng"
+date: 2026-06-06
 weight: 3
 chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}  
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+Mục này liệt kê và giới thiệu các bài blog mình đã đăng lên [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj). Ví dụ:
 
-Tại đây sẽ là phần liệt kê, giới thiệu các blogs mà các bạn đã đăng trên [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj). Ví dụ:
+### [Blog 1 - Bảo Mật Thông Tin Mật Toàn Diện Với GitGuardian Và AWS Secrets Manager](3.1-Blog1/)
+Bài blog này nói về cách kết hợp GitGuardian với AWS Secrets Manager để lấp đầy "khoảng trống hiển thị" trong quản lý thông tin mật, dùng công cụ ggscout để phát hiện secret bị rò rỉ trong lịch sử Git mà không bao giờ để lộ giá trị secret gốc.
 
-###  [Blog 1 - SESSION POLICIES TRONG AMAZON EKS POD IDENTITY](3.1-Blog1/)
-Blog này giới thiệu Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+### [Blog 2 - AI-Powered Test Automation Với Amazon Bedrock Và Rapise](3.2-Blog2/)
+Bài blog này tìm hiểu cách AWS tích hợp sức mạnh AI của Amazon Bedrock vào công cụ kiểm thử tự động Rapise, giúp kịch bản test tự "chữa lành" (self-healing) và sinh kịch bản test bằng AI, giảm chi phí bảo trì script mỗi khi giao diện thay đổi.
 
-###  [Blog 2 - ...](3.2-Blog2/)
-Blog này giới thiệu Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
-
-###  [Blog 3 - ...](3.3-Blog3/)
-Blog này giới thiệu Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+### [Blog 3 - AWS Transform: Continuous Modernization](3.3-Blog3/)
+Bài blog này nói về tính năng mới Continuous Modernization (đang preview) của AWS Transform, tự động quét và sửa technical debt trên toàn bộ repository của tổ chức thông qua các Pull Request tự động.

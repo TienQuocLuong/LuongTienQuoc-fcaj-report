@@ -1,57 +1,28 @@
 ---
 title: "Week 11 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-06-26
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 11 Objectives:
+Finalize the architecture diagram optimized for cost and security; assign tasks and prepare the deployment environment.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
-
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Tasks carried out this week:
+| Day | Date | Task | Reference Material |
+|---|---|---|---|
+| Friday | 26/06/2026 | Team meeting to optimize the architecture diagram: decided to drop SNS since it wasn't needed for the current flow, replaced AWS Bedrock with an alternative solution due to Free Tier account limitations, and discussed the VPC network flow configuration | |
+| Saturday | 27/06/2026 | Reviewed the two DynamoDB table designs to align with the new data flow after the architecture was optimized; adjusted a few fields accordingly | |
+| Sunday | 28/06/2026 | Researched in detail how to set up VPC Endpoints so Lambda and Fargate could communicate internally with DynamoDB, S3, and ECR without going through the internet, improving security and reducing cost | |
+| Monday | 29/06/2026 | Prepared the email used to send reports and researched the Amazon SES verification process; noted that SES defaults to Sandbox mode, so it can only send to verified emails | |
+| Tuesday | 30/06/2026 | Made the final architecture adjustments with the team: placed the Lambda processing function in a Private Subnet, routed through a NAT Gateway to call the external AI API; finalized the architecture diagram | |
+| Wednesday | 01/07/2026 | Received specific task assignments; agreed with the team on the tech stack (Frontend: Next.js, Backend: Python Boto3); reconfirmed my part of the work: DynamoDB, VPC Endpoint, and SES | |
+| Thursday | 02/07/2026 | Prepared a Boto3 script in advance to create the two DynamoDB tables and reviewed the necessary configuration for the VPC Endpoints ahead of deployment day | |
 
 ### Week 11 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Worked with the team to finalize an optimized and secure system architecture: placed ECS Fargate in a Private Subnet using VPC Endpoints to communicate internally with S3, DynamoDB, and ECR; placed the processing Lambda in a Private Subnet routed through a NAT Gateway to call the AI API.
+* Finished adjusting the two DynamoDB table designs to match the new data flow.
+* Gained a solid grasp of VPC Endpoint configuration and the SES email verification process.
+* Was assigned clear tasks and aligned with the team on the technology stack.
+* Prepared the Boto3 script and necessary configuration in advance, ready for the deployment phase.

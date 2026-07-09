@@ -1,31 +1,35 @@
 ---
 title: "Workshop"
-date: 2024-01-01
+date: 2026-06-16
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+# Automated Playwright Testing System Using Docker on AWS (Cloud-Native Architecture)
 
-#### Overview
+This project builds an internal automated testing platform for the company's web applications, with the core goal of completely removing the need for a human to sit and manually run tests every time a website needs a quality check. Playwright simulates real user behavior in the browser — clicking, typing, navigating, and verifying that the site behaves as expected — after which an AI reads the logs and sends a summary by email. The whole process is packaged inside a Docker container to keep the test environment consistent, and runs on AWS following an event-driven, serverless-first architecture: the system doesn't run 24/7, only when there is work to do, avoiding wasted standing costs.
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+From a user's perspective, the system has two parts: the **Backend Engine** (invisible to users — receives test requests, sets up the environment, runs Playwright, collects logs, produces the report, then cleans itself up) and the **Dashboard Console** (the part people actually touch — tracks test runs, manages test scripts, configures who gets notified, and controls access).
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
+Access is split into 3 roles: **Admin** configures the automatic test schedule and manages notification permissions; **QA/Tester** can trigger a test on demand and manage test scripts; **Developer** can only view results. AI only steps in at the very last stage, to turn the raw log into an easy-to-read summary — it never takes part in the testing itself.
 
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
-
-#### Content
-
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+### Content
+1. [Overview](5.1-workshop-overview/)
+2. [Prerequisite](5.2-prerequiste/)
+3. [Infrastructure Setup](5.3-infrastructure-setup/)
+   * 3.1 Networking (VPC)
+   * 3.2 Storage & Data (S3, ECR, DynamoDB)
+   * 3.3 Queue & IAM (SQS, VPC Endpoints, IAM Roles)
+4. [Application Deployment](5.4-application-deployment/)
+   * 4.1 Docker Image
+   * 4.2 ECS Cluster & Task Definition
+   * 4.3 Lambda Functions
+5. [Integration & Access](5.5-integration-access/)
+   * 5.1 Secrets & SES
+   * 5.2 Auth & API Gateway (Cognito)
+   * 5.3 Frontend (S3 + CloudFront)
+   * 5.4 EventBridge Scheduling
+6. [Testing & Cleanup](5.6-testing-cleanup/)
+   * 6.1 End-to-End Test
+   * 6.2 Cleanup

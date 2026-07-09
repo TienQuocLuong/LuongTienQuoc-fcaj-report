@@ -1,57 +1,29 @@
 ---
 title: "Week 6 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-22
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+### Week 6 Objectives (Focus: Database):
+Study Module 06 on databases (RDS, DynamoDB) in depth, a personal strength area, spent the most time and practiced most thoroughly here.
 
-### Week 6 Objectives:
-
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
-
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Tasks carried out this week:
+| Day | Date | Task | Reference Material |
+|---|---|---|---|
+| Friday | 22/05/2026 | Watched the Module 06 lecture and read detailed documentation on Amazon RDS and Aurora; took comparison notes on the engines (MySQL, PostgreSQL, Aurora) and concepts like Multi-AZ and Read Replica | docs.aws.amazon.com/rds |
+| Saturday | 23/05/2026 | Practiced Lab 05 (Amazon RDS): created a MySQL RDS instance, configured a Security Group for EC2 to connect to RDS, installed Node.js and a MySQL client, deployed a Node.js application; fixed an empty .env file issue and an incompatible mysql package by switching to mysql2, and finally got the app running and connected to RDS successfully | awsstudygroup.com (Lab 5) |
+| Sunday | 24/05/2026 | Reviewed SQL queries from basic to advanced (JOIN, GROUP BY, subquery, index) to support data manipulation and optimization | |
+| Monday | 25/05/2026 | Studied Amazon DynamoDB in depth: the NoSQL model, the Partition Key and Sort Key concepts, and how to design tables for efficient querying while avoiding hot partitions | docs.aws.amazon.com/dynamodb |
+| Tuesday | 26/05/2026 | Practiced Lab 60 (DynamoDB): created a table using the AWS CLI, performed full CRUD operations (add/read/update/delete items), queried data using Query and Scan, and distinguished between the two query methods | awsstudygroup.com (Lab 60) |
+| Wednesday | 27/05/2026 | Continued Lab 60: created and queried a Global Secondary Index (GSI) to query by a non-primary-key attribute; then redid all the operations using the Python Boto3 SDK | awsstudygroup.com (Lab 60) |
+| Thursday | 28/05/2026 | Practiced more with Boto3: wrote my own scripts to create a table, load sample data, query, and delete items; this was direct groundwork for the DynamoDB part I'd be responsible for in the group project | |
 
 ### Week 6 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Gained a strong grasp of AWS databases: distinguished relational databases (RDS/Aurora) from NoSQL (DynamoDB) and their use cases.
+* Completed Lab 05: successfully deployed a Node.js application connected to a MySQL RDS instance, and independently resolved a .env issue and a package compatibility issue (switching to mysql2).
+* Completed Lab 60: became proficient in table design, CRUD operations, Query/Scan queries, and creating a Global Secondary Index on DynamoDB.
+* Became proficient operating DynamoDB using both the AWS CLI and the Python Boto3 SDK.
+* Reinforced SQL skills from basic to advanced.
+* Built a solid, direct foundation for my role handling DynamoDB in the group project.
