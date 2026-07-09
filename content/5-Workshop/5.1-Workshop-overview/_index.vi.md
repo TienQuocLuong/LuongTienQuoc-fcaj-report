@@ -6,14 +6,19 @@ chapter : false
 pre : " <b> 5.1. </b> "
 ---
 
-#### Giới thiệu về VPC Endpoint
+#### Giới thiệu về AWS Cloud-Native & Serverless Automation
 
-+ Điểm cuối VPC (endpoint) là thiết bị ảo. Chúng là các thành phần VPC có thể mở rộng theo chiều ngang, dự phòng và có tính sẵn sàng cao. Chúng cho phép giao tiếp giữa tài nguyên điện toán của bạn và dịch vụ AWS mà không gây ra rủi ro về tính sẵn sàng.
-+ Tài nguyên điện toán đang chạy trong VPC có thể truy cập Amazon S3 bằng cách sử dụng điểm cuối Gateway. Interface Endpoint  PrivateLink có thể được sử dụng bởi tài nguyên chạy trong VPC hoặc tại TTDL.
++ Kiến trúc Cloud-Native kết hợp với mô hình hướng sự kiện (Event-Driven Architecture) giúp xây dựng hệ thống kiểm thử tự động có khả năng mở rộng, tính sẵn sàng cao và tối ưu chi phí nhờ sử dụng các dịch vụ Serverless trên AWS.
++ Hệ thống sử dụng Docker và Playwright để thực thi kiểm thử trên Amazon ECS Fargate, lưu trữ báo cáo trên Amazon S3, ghi log vào Amazon CloudWatch và tích hợp Amazon Bedrock để hỗ trợ phân tích, tóm tắt kết quả kiểm thử.
 
 #### Tổng quan về workshop
-Trong workshop này, bạn sẽ sử dụng hai VPC.
-+ **"VPC Cloud"** dành cho các tài nguyên cloud như Gateway endpoint và EC2 instance để kiểm tra.
-+ **"VPC On-Prem"** mô phỏng môi trường truyền thống như nhà máy hoặc trung tâm dữ liệu của công ty. Một EC2 Instance chạy phần mềm StrongSwan VPN đã được triển khai trong "VPC On-prem" và được cấu hình tự động để thiết lập đường hầm VPN Site-to-Site với AWS Transit Gateway. VPN này mô phỏng kết nối từ một vị trí tại TTDL (on-prem) với AWS cloud. Để giảm thiểu chi phí, chỉ một phiên bản VPN được cung cấp để hỗ trợ workshop này. Khi lập kế hoạch kết nối VPN cho production workloads của bạn, AWS khuyên bạn nên sử dụng nhiều thiết bị VPN để có tính sẵn sàng cao.
 
-![overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+Trong workshop này, bạn sẽ xây dựng và triển khai một hệ thống kiểm thử tự động End-to-End (E2E) trên nền tảng AWS.
+
++ **"Backend Engine"** tiếp nhận yêu cầu kiểm thử từ Amazon API Gateway hoặc Amazon EventBridge, điều phối quá trình thực thi bằng AWS Lambda, chạy các bài kiểm thử trên Amazon ECS Fargate và lưu kết quả trên Amazon S3 cùng Amazon CloudWatch.
+
++ **"Dashboard Console"** cung cấp giao diện quản trị giúp quản lý kịch bản kiểm thử, theo dõi lịch sử thực thi và phân quyền người dùng thông qua Amazon S3 và Amazon CloudFront.
+
++ **"AI Support & Notification"** sử dụng AWS Lambda kết hợp Amazon Bedrock để phân tích kết quả kiểm thử, sau đó gửi báo cáo tự động qua Amazon SES/SNS, đồng thời vẫn đảm bảo quá trình thông báo không bị gián đoạn khi dịch vụ AI gặp sự cố.
+
+![overview](/images/5-Workshop/5.1-Workshop-overview/diagram.jpeg)
