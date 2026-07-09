@@ -1,125 +1,69 @@
 ---
-title: "Event 1"
-date: 2024-01-01
-weight: 1
-chapter: false
-pre: " <b> 4.1. </b> "
+title : "AWS First Cloud Journey - FCAJ Community Day"
+date : 2026-05-10
+weight : 2
+chapter : false
+pre : "<b> 4.1. </b>"
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+#### Mục đích của sự kiện
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
++ Giới thiệu các phương pháp học tập hiện đại dựa trên Gamification nhằm giúp người học duy trì động lực và hình thành thói quen học tập lâu dài.
 
-### Mục Đích Của Sự Kiện
++ Chia sẻ các kỹ thuật Prompt Engineering từ cơ bản đến nâng cao để nâng cao chất lượng phản hồi của các mô hình Generative AI.
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
++ Giới thiệu kiến trúc Serverless trên AWS thông qua dự án Proptimizer, đồng thời phân tích cách tối ưu chi phí và hiệu năng khi triển khai các ứng dụng AI trên nền tảng đám mây.
 
-### Danh Sách Diễn Giả
++ Trình bày phương pháp BMAD kết hợp Agile và AI Agents nhằm tối ưu quy trình phát triển phần mềm và nâng cao năng suất làm việc của nhóm phát triển.
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+#### Danh sách diễn giả
 
-### Nội Dung Nổi Bật
++ **Huỳnh Hoàng Long** – Admin FCAJ.
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
++ **Nguyễn Tuấn Thịnh** – DevOps/Cloud Engineer, First Cloud AI Journey.
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
++ **Khang** – Speaker.
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
++ **Thảo Nguyễn** – GenAI Engineer, VIB.
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+#### Nội dung nổi bật
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
++ **Addicted to Learning Like You're Addicted to Social Media** – *Huỳnh Hoàng Long*
 
-#### Domain-Driven Design (DDD)
+Buổi chia sẻ tập trung vào việc xây dựng động lực học tập thông qua cơ chế hoạt động của Dopamine và phương pháp Gamification. Người tham dự được giới thiệu các kỹ thuật như Learning Streak, quy tắc 2 phút và cơ chế phần thưởng nhằm giúp việc học trở nên thú vị, dễ duy trì và hình thành thói quen lâu dài.
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
++ **Automated Prompt Engineering: Enhancing LLM Output Quality** – *Nguyễn Tuấn Thịnh*
 
-#### Event-Driven Architecture
+Diễn giả giới thiệu các phương pháp tối ưu Prompt để khai thác hiệu quả các mô hình ngôn ngữ lớn như Chain of Thought (CoT), Self-Consistency, Tree of Thoughts (ToT), Role Prompting và Retrieval-Augmented Generation (RAG).
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+Ngoài ra, phần trình bày còn giới thiệu dự án **Proptimizer** được xây dựng theo kiến trúc Serverless trên AWS sử dụng Amazon S3, CloudFront, Amazon Cognito, API Gateway, AWS Lambda, Amazon Bedrock, DynamoDB và CloudWatch nhằm tối ưu chi phí vận hành cũng như khả năng mở rộng của hệ thống.
 
-#### Compute Evolution
++ **AI-Ready Freshers: Skills and Mindset in the AI Era** – *Khang*
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+Bài chia sẻ nhấn mạnh rằng AI chỉ đóng vai trò là công cụ hỗ trợ, còn tư duy và khả năng học hỏi của con người mới là yếu tố quyết định. Nội dung bao gồm Growth Mindset, kỹ năng đặt câu hỏi, tư duy phản biện, khả năng tự học và những tiêu chí mà doanh nghiệp thường sử dụng để đánh giá ứng viên trong thời đại AI.
 
-#### Amazon Q Developer
++ **BMAD Method – Bringing Agile & AI Agents into Your IDE** – *Thảo Nguyễn*
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+Diễn giả giới thiệu phương pháp BMAD nhằm cải thiện quy trình phát triển phần mềm bằng cách sử dụng nhiều AI Agents với các vai trò chuyên biệt như Product Owner, Project Manager, Architect, Scrum Master, Developer và Reviewer.
 
-### Những Gì Học Được
+Quy trình làm việc được chia thành nhiều giai đoạn từ phân tích yêu cầu, thiết kế hệ thống, chia nhỏ công việc, phát triển mã nguồn cho đến kiểm thử và đánh giá chất lượng sản phẩm, giúp giảm Context Bloat và nâng cao hiệu quả phát triển phần mềm.
 
-#### Tư Duy Thiết Kế
+#### Những gì học được
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+Qua buổi workshop, em hiểu rõ hơn về cách xây dựng thói quen học tập thông qua Gamification thay vì chỉ dựa vào động lực nhất thời. Những chia sẻ về Learning Streak và cơ chế phần thưởng giúp em có thêm phương pháp để duy trì việc học một cách đều đặn hơn.
 
-#### Kiến Trúc Kỹ Thuật
+Bên cạnh đó, em cũng tiếp cận được nhiều kiến thức mới về Prompt Engineering và cách tối ưu Prompt để nâng cao chất lượng câu trả lời của các mô hình AI. Đặc biệt, phương pháp BMAD giúp em có thêm góc nhìn mới về việc kết hợp AI vào toàn bộ quy trình phát triển phần mềm thay vì chỉ sử dụng AI để hỗ trợ viết mã.
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+#### Ứng dụng vào công việc
 
-#### Chiến Lược Hiện Đại Hóa
+Những kiến thức thu được từ workshop có thể áp dụng trực tiếp vào việc học cũng như các dự án cá nhân của em.
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+Em có thể áp dụng các kỹ thuật Prompt Engineering để tạo ra các Prompt rõ ràng và hiệu quả hơn khi làm việc với ChatGPT hoặc các mô hình AI khác. Đồng thời, phương pháp BMAD cũng là một quy trình phù hợp để triển khai các dự án phần mềm có quy mô lớn, giúp quản lý công việc khoa học và giảm thời gian chỉnh sửa sau khi phát triển.
 
-### Ứng Dụng Vào Công Việc
+Ngoài ra, các phương pháp xây dựng thói quen học tập được chia sẻ trong workshop cũng giúp em nâng cao tính kỷ luật và duy trì việc học tập liên tục.
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+#### Trải nghiệm trong sự kiện
 
-### Trải nghiệm trong event
+Đây là lần đầu tiên em tham gia một sự kiện của cộng đồng AWS First Cloud Journey nên ban đầu em có phần khá hồi hộp. Tuy nhiên, không khí của workshop rất thân thiện và các diễn giả đều trình bày dễ hiểu, kết hợp với nhiều ví dụ thực tế nên em có thể tiếp thu kiến thức một cách thuận lợi.
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
-
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
-
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
-
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+Bên cạnh việc học hỏi thêm về AI, AWS Cloud và các phương pháp phát triển phần mềm hiện đại, em còn có cơ hội gặp gỡ nhiều anh chị và các bạn có cùng định hướng trong lĩnh vực công nghệ. Đây là một trải nghiệm rất bổ ích và tạo thêm động lực để em tiếp tục học tập cũng như tham gia các workshop trong tương lai.
