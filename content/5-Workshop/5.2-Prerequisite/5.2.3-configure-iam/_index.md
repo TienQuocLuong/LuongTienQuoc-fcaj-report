@@ -22,7 +22,7 @@ Follow the principle of least privilege. The `FullAccess` policies visible in th
 
 ---
 
-### Step 1: Create the Lambda execution role
+**Step 1:** Create the Lambda execution role
 
 Open the **AWS Management Console**, search for **IAM**, and choose:
 
@@ -61,7 +61,7 @@ Verify that the trust policy contains the `lambda.amazonaws.com` service princip
 
 ---
 
-### Step 2: Create the ECS task execution role
+**Step 2:** Create the ECS task execution role
 
 Create another role and select:
 
@@ -95,7 +95,7 @@ Verify that the trust policy uses the `ecs-tasks.amazonaws.com` service principa
 
 ---
 
-### Step 3: Create the ECS task role
+**Step 3:** Create the ECS task role
 
 Create another role with the same trusted service:
 
@@ -127,7 +127,7 @@ Then choose **Create role**.
 
 ---
 
-### Step 4: Verify the roles
+**Step 4:** Verify the roles
 
 Return to **IAM → Roles** and confirm that all three roles exist:
 

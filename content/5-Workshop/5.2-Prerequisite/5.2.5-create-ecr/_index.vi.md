@@ -23,7 +23,7 @@ Thông tin repository:
 
 ---
 
-### Bước 1: Mở Amazon ECR
+**Bước 1:** Mở Amazon ECR
 
 Đăng nhập **AWS Management Console**, tìm **Elastic Container Registry**, sau đó mở:
 
@@ -49,7 +49,7 @@ Giữ **Image tag mutability** là `Mutable`, bật quét image khi push và gi�
 
 ---
 
-### Bước 2: Kiểm tra repository đã tạo
+**Bước 2:** Kiểm tra repository đã tạo
 
 Sau khi tạo thành công, danh sách **Private repositories** sẽ hiển thị `playwright-runner` cùng URI, chế độ tag và loại mã hóa.
 
@@ -66,7 +66,7 @@ Mở repository và kiểm tra:
 
 ---
 
-### Bước 3: Xem lệnh push image
+**Bước 3:** Xem lệnh push image
 
 Trong repository, chọn **View push commands**, sau đó chọn tab **Windows**. AWS sẽ hiển thị các lệnh dành riêng cho tài khoản và Region hiện tại.
 
@@ -74,7 +74,7 @@ Trong repository, chọn **View push commands**, sau đó chọn tab **Windows**
 
 ---
 
-### Bước 4: Đăng nhập Docker vào ECR
+**Bước 4:** Đăng nhập Docker vào ECR
 
 Mở PowerShell tại thư mục chứa `Dockerfile`. Thay `<ACCOUNT_ID>` bằng AWS Account ID của bạn rồi chạy:
 
@@ -94,7 +94,7 @@ Không đưa mật khẩu, access key hoặc token đăng nhập ECR vào mã ng
 
 ---
 
-### Bước 5: Build, tag và push Docker image
+**Bước 5:** Build, tag và push Docker image
 
 Build image từ `Dockerfile`:
 
@@ -116,7 +116,7 @@ docker push <ACCOUNT_ID>.dkr.ecr.ap-southeast-1.amazonaws.com/playwright-runner:
 
 ---
 
-### Bước 6: Xác nhận image
+**Bước 6:** Xác nhận image
 
 Quay lại repository `playwright-runner`, mở tab **Images**, sau đó làm mới trang. Image tag `latest` cần xuất hiện và trạng thái quét không có lỗ hổng nghiêm trọng chưa xử lý.
 

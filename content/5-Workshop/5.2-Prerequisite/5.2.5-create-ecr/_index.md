@@ -22,7 +22,7 @@ The repository created in this section will be used to:
 
 ---
 
-## Step 1: Open Amazon ECR
+**Step 1:** Open Amazon ECR
 
 Sign in to the **AWS Management Console**.
 
@@ -50,7 +50,7 @@ Create repository
 
 ---
 
-## Step 2: Configure the Repository
+**Step 2:** Configure the Repository
 
 Configure the repository with the following settings.
 
@@ -72,7 +72,7 @@ Create repository
 
 ---
 
-## Step 3: Verify the Repository
+**Step 3:** Verify the Repository
 
 After a few moments, Amazon ECR creates the repository successfully.
 
@@ -97,7 +97,7 @@ Verify the following information:
 
 ---
 
-## Step 4: View Push Commands
+**Step 4:** View Push Commands
 
 From the repository page, choose
 

@@ -24,7 +24,7 @@ After completing this section, the two buckets will be used for the following pu
 
 ---
 
-## Step 1: Open Amazon S3
+**Step 1:** Open Amazon S3
 
 Sign in to the **AWS Management Console**.
 
@@ -38,7 +38,7 @@ Choose **Amazon S3**, then select **Create bucket**.
 
 ---
 
-## Step 2: Create Report Bucket
+**Step 2:** Create Report Bucket
 
 Configure the following information.
 
@@ -62,7 +62,7 @@ The report bucket stores all files generated during Playwright test execution, i
 
 ---
 
-## Step 3: Create Web UI Bucket
+**Step 3:** Create Web UI Bucket
 
 Create another bucket with the following configuration.
 
@@ -86,7 +86,7 @@ This bucket hosts the frontend application that users access through Amazon Clou
 
 ---
 
-## Step 4: Enable Static Website Hosting
+**Step 4:** Enable Static Website Hosting
 
 Open the bucket
 
@@ -122,7 +122,7 @@ Static Website Hosting allows Amazon S3 to serve the frontend website through th
 
 ---
 
-## Step 5: Upload Initial Files
+**Step 5:** Upload Initial Files
 
 Upload the required project files into each bucket.
 
@@ -177,7 +177,7 @@ These files make up the static frontend website that users will access later thr
 
 ---
 
-## Step 6: Verify the Buckets
+**Step 6:** Verify the Buckets
 
 Return to
 
