@@ -8,11 +8,12 @@ pre : " <b> 5.2.3. </b> "
 
 #### Configure IAM roles for Lambda and ECS
 
-In this section, you will create three IAM roles for the Playwright testing system:
+In this section, you will create four IAM roles for the Playwright testing system:
 
 | IAM role | Trusted service | Purpose |
 |---|---|---|
 | `playwright-lambda-role` | AWS Lambda | Allows Lambda to orchestrate ECS and process results |
+| `playwright-postprocessing-role` | AWS Lambda | Dedicated role for the `playwright-postprocessing` Lambda, separated to more tightly control access to Secrets Manager and SES |
 | `playwright-ecs-execution-role` | ECS Tasks | Allows ECS to pull images from ECR and write logs |
 | `playwright-ecs-task-role` | ECS Tasks | Grants permissions to the application inside the container |
 
@@ -61,7 +62,36 @@ Verify that the trust policy contains the `lambda.amazonaws.com` service princip
 
 ---
 
-**Step 2:** Create the ECS task execution role
+**Step 2:** Create a dedicated role for the Post-processing Lambda
+
+Besides the shared `playwright-lambda-role` from Step 1, the `playwright-postprocessing` Lambda uses **its own dedicated role** — since this function calls Secrets Manager to retrieve the AI API Key and calls SES to send email more than the other Lambdas in the system, it's separated out for easier control and to narrow down permissions later.
+
+Create another new role, select:
+
+| Property | Value |
+|---|---|
+| Trusted entity type | `AWS service` |
+| Service or use case | `Lambda` |
+
+Attach the same permission groups as Step 1 (CloudWatch Logs, DynamoDB, Secrets Manager, S3, SES).
+
+Enter the role name:
+
+```text
+playwright-postprocessing-role
+```
+
+![Role playwright-postprocessing-role created](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/2b-postprocessing-role-created.jpeg?featherlight=false&width=90pc)
+
+{{% notice note %}}
+Note down this role's ARN (in the form `arn:aws:iam::<account-id>:role/playwright-postprocessing-role`) — it will be attached to the `playwright-postprocessing` Lambda in section 5.7, instead of `playwright-lambda-role`.
+{{% /notice %}}
+
+Verify that the trust policy contains the `lambda.amazonaws.com` service principal, and then choose **Create role**.
+
+---
+
+**Step 3:** Create the ECS task execution role
 
 Create another role and select:
 
@@ -95,7 +125,7 @@ Verify that the trust policy uses the `ecs-tasks.amazonaws.com` service principa
 
 ---
 
-**Step 3:** Create the ECS task role
+**Step 4:** Create the ECS task role
 
 Create another role with the same trusted service:
 
@@ -127,12 +157,13 @@ Then choose **Create role**.
 
 ---
 
-**Step 4:** Verify the roles
+**Step 5:** Verify the roles
 
-Return to **IAM → Roles** and confirm that all three roles exist:
+Return to **IAM → Roles** and confirm that all four roles exist:
 
 ```text
 playwright-lambda-role
+playwright-postprocessing-role
 playwright-ecs-execution-role
 playwright-ecs-task-role
 ```
@@ -146,4 +177,4 @@ When creating the ECS task definition later, configure:
 | Task execution role | `playwright-ecs-execution-role` |
 | Task role | `playwright-ecs-task-role` |
 
-The `playwright-postprocessing` Lambda function uses `playwright-lambda-role` as its execution role.
+The `playwright-postprocessing` Lambda function uses **`playwright-postprocessing-role`** as its execution role (not the shared `playwright-lambda-role`). The remaining Lambda functions (`playwright-api-backend`, `playwright-coordinator`, `playwright-error-handler`) continue to use `playwright-lambda-role`.
