@@ -165,8 +165,6 @@ Verify the following variable exists:
 
 The Lambda function uses this variable to determine which secret should be retrieved.
 
-![Lambda Environment Variable](/images/5-Workshop/5.8-secrets-and-notification/5.8.1-secrets-manager/05-lambda-secret-variable.png?featherlight=false&width=90pc)
-
 ---
 
 **Step 8:** Retrieve the Secret in Lambda
@@ -215,7 +213,7 @@ This permission allows Lambda to retrieve only the required secret.
 
 ---
 
-### Expected Result
+#### Expected Result
 
 After completing this section, the workflow is as follows:
 

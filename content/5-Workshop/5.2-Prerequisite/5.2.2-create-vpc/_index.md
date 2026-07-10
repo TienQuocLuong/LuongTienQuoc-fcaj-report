@@ -17,7 +17,7 @@ In this section, we will build the network infrastructure from scratch. The firs
 - **Name tag:** Enter a name for the VPC (e.g., `playwright-vpc`).
 - **IPv4 CIDR block:** Select *IPv4 CIDR manual input* and enter the network range `10.0.0.0/16`.
 
-![VPC Top Configuration](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/2-vpc-name-cidr.png?featherlight=false&width=90pc)
+![VPC Top Configuration](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/1-vpc-name-cidr.png?featherlight=false&width=90pc)
 
 **Step 3:** Scroll down to the **Tags** section (the system has automatically filled this from the previous step). Leave the remaining default configurations unchanged and click the orange **Create VPC** button.
 
