@@ -41,7 +41,7 @@ playwright-runner
 
 Giữ **Image tag mutability** là `Mutable`, bật quét image khi push và giữ mã hóa `AES-256`. Sau đó chọn **Create repository**.
 
-![Cấu hình ECR repository](/images/5-Workshop/5.2-Prerequisite/5.2.5-create-ecr/create-repository.png?featherlight=false&width=90pc)
+![Cấu hình ECR repository](/images/5-Workshop/5.2-Prerequisite/5.2.5-create-ecr/1-create-repository.png?featherlight=false&width=90pc)
 
 {{% notice note %}}
 `Mutable` phù hợp với workshop vì tag `latest` có thể được cập nhật. Trong production, nên dùng tag phiên bản bất biến như Git commit SHA và cân nhắc chọn `Immutable`.
@@ -53,7 +53,7 @@ Giữ **Image tag mutability** là `Mutable`, bật quét image khi push và gi�
 
 Sau khi tạo thành công, danh sách **Private repositories** sẽ hiển thị `playwright-runner` cùng URI, chế độ tag và loại mã hóa.
 
-![Repository đã được tạo](/images/5-Workshop/5.2-Prerequisite/5.2.5-create-ecr/repository-created.png?featherlight=false&width=90pc)
+![Repository đã được tạo](/images/5-Workshop/5.2-Prerequisite/5.2.5-create-ecr/2-repository-created.png?featherlight=false&width=90pc)
 
 Mở repository và kiểm tra:
 
@@ -62,7 +62,7 @@ Mở repository và kiểm tra:
 - Encryption type: `AES-256`
 - Scan frequency: `Scan on push`
 
-![Chi tiết repository](/images/5-Workshop/5.2-Prerequisite/5.2.5-create-ecr/repository-details.png?featherlight=false&width=90pc)
+![Chi tiết repository](/images/5-Workshop/5.2-Prerequisite/5.2.5-create-ecr/3-repository-details.png?featherlight=false&width=90pc)
 
 ---
 
@@ -70,7 +70,7 @@ Mở repository và kiểm tra:
 
 Trong repository, chọn **View push commands**, sau đó chọn tab **Windows**. AWS sẽ hiển thị các lệnh dành riêng cho tài khoản và Region hiện tại.
 
-![Các lệnh push trên Windows](/images/5-Workshop/5.2-Prerequisite/5.2.5-create-ecr/view-push-commands-windows.png?featherlight=false&width=90pc)
+![Các lệnh push trên Windows](/images/5-Workshop/5.2-Prerequisite/5.2.5-create-ecr/4-view-push-commands-windows.png?featherlight=false&width=90pc)
 
 ---
 

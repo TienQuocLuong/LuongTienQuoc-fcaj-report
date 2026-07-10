@@ -17,11 +17,11 @@ Trong phần này, chúng ta sẽ tự tay xây dựng hạ tầng mạng từ c
 - **Name tag:** Điền tên cho VPC (ví dụ: `playwright-vpc`).
 - **IPv4 CIDR block:** Chọn *IPv4 CIDR manual input* và điền dải mạng `10.0.0.0/16`.
 
-![Cấu hình VPC phần trên](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/create-vpc-step1.png?featherlight=false&width=90pc)
+![Cấu hình VPC phần trên](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/1-create-vpc-step1.png?featherlight=false&width=90pc)
 
 **Bước 3:** Cuộn xuống phần **Tags** (hệ thống đã tự động điền từ bước trên). Bạn giữ nguyên các cấu hình mặc định còn lại và bấm nút **Create VPC** màu cam.
 
-![Cấu hình VPC phần dưới](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/create-vpc-step2.png?featherlight=false&width=90pc)
+![Cấu hình VPC phần dưới](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/2-create-vpc-step2.png?featherlight=false&width=90pc)
 
 **Bước 4:** Khi thấy màn hình hiện thông báo màu xanh lá, chúc mừng bạn đã khởi tạo thành công khung mạng VPC.
 
@@ -37,7 +37,7 @@ Sau khi có VPC, chúng ta cần chia nó thành các Mạng con (Subnet). Hệ 
 - **IPv4 subnet CIDR block:** Điền `10.0.1.0/24`
 - **Tags:** Hệ thống tự động điền Key là `Name` và Value là `playwright-public-subnet`.
 
-![Cấu hình phía trên](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/create-public-subnet.png?featherlight=false&width=90pc)
+![Cấu hình phía trên](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/3-create-public-subnet.png?featherlight=false&width=90pc)
 
 **Bước 3:** Cuộn xuống dưới cùng, kiểm tra lại các thông số và bấm nút **Create subnet** màu cam.
 
@@ -56,13 +56,13 @@ Quá trình tạo Private Subnet hoàn toàn tương tự như Public Subnet. B�
 
 **Bước 2:** Tại màn hình khởi tạo, nhập tên cho IGW ở mục **Name tag** là `playwright-igw` và bấm nút **Create internet gateway**.
 
-![Tạo Internet Gateway](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/create-igw.png?featherlight=false&width=90pc)
+![Tạo Internet Gateway](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/4-create-igw.png?featherlight=false&width=90pc)
 
 **Bước 3:** Sau khi tạo xong, trạng thái của IGW đang là **Detached**. Bạn bấm vào nút **Actions** ở góc phải, chọn **Attach to VPC**. 
 
 **Bước 4:** Tại màn hình **Attach to VPC**, click vào ô **Available VPCs** và chọn `vpc-... | playwright-vpc` từ danh sách xổ xuống, sau đó bấm nút **Attach internet gateway**.
 
-![Gắn vào VPC](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/attach-igw.png?featherlight=false&width=90pc)
+![Gắn vào VPC](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/5-attach-igw.png?featherlight=false&width=90pc)
 
 #### 4. Cấp phát Elastic IP và Khởi tạo NAT Gateway
 
@@ -75,7 +75,7 @@ Private Subnet không thể trực tiếp truy cập Internet. Để cho phép c
   - **Public IPv4 address pool:** `Amazon's pool of IPv4 addresses`
 - Cuộn xuống dưới cùng và bấm nút **Allocate**.
 
-![Cấp phát Elastic IP](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/allocate-eip.png?featherlight=false&width=90pc)
+![Cấp phát Elastic IP](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/6-allocate-eip.png?featherlight=false&width=90pc)
 
 **Bước 2: Khởi tạo NAT Gateway**
 - Trở lại menu bên trái, chọn **NAT gateways** và bấm nút **Create NAT gateway**.
@@ -87,7 +87,7 @@ Private Subnet không thể trực tiếp truy cập Internet. Để cho phép c
   - **Elastic IP allocation ID:** Click vào ô và chọn địa chỉ Elastic IP vừa cấp phát ở Bước 1 (ví dụ: `eipalloc-...`).
 - Cuộn xuống dưới và bấm nút **Create NAT gateway** màu cam.
 
-![Khởi tạo NAT Gateway](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/create-nat-gw.png?featherlight=false&width=90pc)
+![Khởi tạo NAT Gateway](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/7-create-nat-gw.png?featherlight=false&width=90pc)
 
 #### 5. Thiết lập Bảng định tuyến (Route Tables)
 
@@ -110,20 +110,20 @@ Route Table giống như biển chỉ đường, quyết định luồng giao th
 
 **Bước 7:** Bấm **Save changes**.
 
-![Cấu hình Route ra Internet Gateway](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/public-route-igw.png?featherlight=false&width=90pc)
+![Cấu hình Route ra Internet Gateway](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/8-public-route-igw.png?featherlight=false&width=90pc)
 
 **Phần 2: Khởi tạo và cấu hình Private Route Table**
 **Bước 1:** Vẫn ở màn hình **Route tables**, bấm nút **Create route table**.
 
 **Bước 2:** Điền **Name** là `playwright-private-rtb` và chọn VPC `vpc-... (playwright-vpc)`, sau đó bấm nút **Create route table** màu cam.
 
-![Tạo Private Route Table](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/create-private-rtb.png?featherlight=false&width=90pc)
+![Tạo Private Route Table](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/9-create-private-rtb.png?featherlight=false&width=90pc)
 
 **Bước 3:** Sau khi tạo xong, tại trang chi tiết của `playwright-private-rtb`, chuyển sang tab **Subnet associations** và bấm **Edit subnet associations**.
 
 **Bước 4:** Tick chọn `playwright-private-subnet` và bấm **Save associations**.
 
-![Gắn Private Subnet vào Route Table](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/associate-private-subnet.png?featherlight=false&width=90pc)
+![Gắn Private Subnet vào Route Table](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/10-associate-private-subnet.png?featherlight=false&width=90pc)
 
 **Bước 5:** Tiếp theo, chuyển sang tab **Routes** và bấm **Edit routes**.
 
@@ -133,7 +133,7 @@ Route Table giống như biển chỉ đường, quyết định luồng giao th
 
 **Bước 7:** Bấm **Save changes**.
 
-![Cấu hình Route ra NAT Gateway](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/private-route-nat.png?featherlight=false&width=90pc)
+![Cấu hình Route ra NAT Gateway](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/11-private-route-nat.png?featherlight=false&width=90pc)
 
 #### 6. Thiết lập Security Groups (Tường lửa)
 
@@ -159,7 +159,7 @@ Route Table giống như biển chỉ đường, quyết định luồng giao th
 
 **Bước 6:** Bấm **Create security group**.
 
-![Tạo Security Group cho Lambda](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/create-lambda-sg.png?featherlight=false&width=90pc)
+![Tạo Security Group cho Lambda](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/12-create-lambda-sg.png?featherlight=false&width=90pc)
 
 **Phần 2: Tạo SG cho VPC Endpoints (Target SG)**
 **Bước 1:** Tiếp tục bấm **Create security group**.
@@ -175,11 +175,11 @@ Route Table giống như biển chỉ đường, quyết định luồng giao th
    - **Source:** Chọn `Custom`, click vào ô tìm kiếm và chọn `playwright-sg-lambda`.
    - Bấm **Add rule** để thêm rule thứ hai tương tự, nhưng Source chọn `playwright-sg-fargate`.
 
-![Cấu hình Inbound cho Endpoint SG](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/endpoint-sg-inbound.png?featherlight=false&width=90pc)
+![Cấu hình Inbound cho Endpoint SG](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/13-endpoint-sg-inbound.png?featherlight=false&width=90pc)
 
 **Bước 6:** **Outbound rules:** Giữ nguyên mặc định là `All traffic` ra `0.0.0.0/0`.
 
-![Cấu hình Outbound mặc định](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/endpoint-sg-outbound.png?featherlight=false&width=90pc)
+![Cấu hình Outbound mặc định](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/14-endpoint-sg-outbound.png?featherlight=false&width=90pc)
 
 **Bước 7:** Cuộn xuống và bấm **Create security group**.
 

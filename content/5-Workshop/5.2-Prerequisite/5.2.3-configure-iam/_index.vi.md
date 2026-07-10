@@ -39,7 +39,7 @@ Chọn **AWS service** làm trusted entity và chọn use case **Lambda**.
 playwright-lambda-role
 ```
 
-![Tạo Lambda role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/create-lambda-role.png?featherlight=false&width=90pc)
+![Tạo Lambda role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/1-create-lambda-role.png?featherlight=false&width=90pc)
 
 Lambda xử lý hậu kỳ (post-processing) cần các nhóm quyền sau:
 
@@ -51,7 +51,7 @@ Lambda xử lý hậu kỳ (post-processing) cần các nhóm quyền sau:
 - Đọc secret `playwright/openai-api-key`.
 - Gửi email qua Amazon SES.
 
-![Policy cho Lambda role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/lambda-role-created.png?featherlight=false&width=90pc)
+![Policy cho Lambda role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/2-lambda-role-created.png?featherlight=false&width=90pc)
 
 {{% notice note %}}
 Với môi trường production, hãy thay các policy `FullAccess` của AWS bằng policy tùy chỉnh giới hạn theo action và resource ARN cụ thể. Secrets Manager chỉ cần quyền `secretsmanager:GetSecretValue`; không cần dùng `SecretsManagerReadWrite`.
@@ -71,7 +71,7 @@ Tạo thêm một role khác và chọn:
 | Service or use case | `Elastic Container Service` |
 | Use case | `Elastic Container Service Task` |
 
-![Chọn ECS Tasks làm trusted service](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/create-ecs-execution-role.png?featherlight=false&width=90pc)
+![Chọn ECS Tasks làm trusted service](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/3-create-ecs-execution-role.png?featherlight=false&width=90pc)
 
 Gắn AWS managed policy sau:
 
@@ -81,7 +81,7 @@ AmazonECSTaskExecutionRolePolicy
 
 Policy này cho phép ECS agent tải image từ Amazon ECR và gửi log container lên CloudWatch Logs.
 
-![Policy cho ECS execution role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/ecs-execution-role-created.png?featherlight=false&width=90pc)
+![Policy cho ECS execution role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/4-ecs-execution-role-created.png?featherlight=false&width=90pc)
 
 Đặt tên role:
 
@@ -89,7 +89,7 @@ Policy này cho phép ECS agent tải image từ Amazon ECR và gửi log contai
 playwright-ecs-execution-role
 ```
 
-![Đặt tên ECS execution role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/playwright-ecs-execution-role.png?featherlight=false&width=90pc)
+![Đặt tên ECS execution role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/5-playwright-ecs-execution-role.png?featherlight=false&width=90pc)
 
 Kiểm tra trust policy dùng service principal `ecs-tasks.amazonaws.com`, sau đó chọn **Create role**.
 
@@ -103,7 +103,7 @@ Tạo thêm một role khác với cùng trusted service:
 Elastic Container Service Task
 ```
 
-![Tạo ECS task role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/ecs-task-role-created.png?featherlight=false&width=90pc)
+![Tạo ECS task role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/6-ecs-task-role-created.png?featherlight=false&width=90pc)
 
 Ứng dụng Playwright bên trong container sử dụng task role này. Chỉ cấp đúng những quyền ứng dụng thực sự cần, ví dụ:
 
@@ -113,7 +113,7 @@ Elastic Container Service Task
 
 Ảnh chụp workshop minh họa việc chọn policy S3 và CloudWatch Logs:
 
-![Policy cho ECS task role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/create-ecs-task-role.png?featherlight=false&width=90pc)
+![Policy cho ECS task role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/7-create-ecs-task-role.png?featherlight=false&width=90pc)
 
 Đặt tên role:
 
@@ -121,7 +121,7 @@ Elastic Container Service Task
 playwright-ecs-task-role
 ```
 
-![Đặt tên ECS task role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/ecs-task-role-policies.png?featherlight=false&width=90pc)
+![Đặt tên ECS task role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/8-ecs-task-role-policies.png?featherlight=false&width=90pc)
 
 Sau đó chọn **Create role**.
 
@@ -137,7 +137,7 @@ playwright-ecs-execution-role
 playwright-ecs-task-role
 ```
 
-![Danh sách IAM role đã tạo](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/lambda-role-policies.png?featherlight=false&width=90pc)
+![Danh sách IAM role đã tạo](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/9-lambda-role-policies.png?featherlight=false&width=90pc)
 
 Khi tạo ECS task definition ở bước sau, cấu hình:
 

@@ -39,7 +39,7 @@ For the role name, enter:
 playwright-lambda-role
 ```
 
-![Create the Lambda role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/create-lambda-role.png?featherlight=false&width=90pc)
+![Create the Lambda role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/1-create-lambda-role.png?featherlight=false&width=90pc)
 
 The post-processing Lambda requires these permission groups:
 
@@ -51,7 +51,7 @@ The post-processing Lambda requires these permission groups:
 - Read the `playwright/openai-api-key` secret.
 - Send email through Amazon SES.
 
-![Policies for the Lambda role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/lambda-role-created.png?featherlight=false&width=90pc)
+![Policies for the Lambda role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/2-lambda-role-created.png?featherlight=false&width=90pc)
 
 {{% notice note %}}
 For production, replace broad AWS managed `FullAccess` policies with custom policies restricted by action and resource ARN. Secrets Manager requires only `secretsmanager:GetSecretValue`; `SecretsManagerReadWrite` is unnecessary.
@@ -71,7 +71,7 @@ Create another role and select:
 | Service or use case | `Elastic Container Service` |
 | Use case | `Elastic Container Service Task` |
 
-![Select ECS Tasks as the trusted service](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/create-ecs-execution-role.png?featherlight=false&width=90pc)
+![Select ECS Tasks as the trusted service](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/3-create-ecs-execution-role.png?featherlight=false&width=90pc)
 
 Attach this AWS managed policy:
 
@@ -81,7 +81,7 @@ AmazonECSTaskExecutionRolePolicy
 
 This policy allows the ECS agent to pull images from Amazon ECR and send container logs to CloudWatch Logs.
 
-![Policy for the ECS execution role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/ecs-execution-role-created.png?featherlight=false&width=90pc)
+![Policy for the ECS execution role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/4-ecs-execution-role-created.png?featherlight=false&width=90pc)
 
 Enter the role name:
 
@@ -89,7 +89,7 @@ Enter the role name:
 playwright-ecs-execution-role
 ```
 
-![Name the ECS execution role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/playwright-ecs-execution-role.png?featherlight=false&width=90pc)
+![Name the ECS execution role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/5-playwright-ecs-execution-role.png?featherlight=false&width=90pc)
 
 Verify that the trust policy uses the `ecs-tasks.amazonaws.com` service principal, and then choose **Create role**.
 
@@ -103,7 +103,7 @@ Create another role with the same trusted service:
 Elastic Container Service Task
 ```
 
-![Create the ECS task role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/ecs-task-role-created.png?featherlight=false&width=90pc)
+![Create the ECS task role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/6-ecs-task-role-created.png?featherlight=false&width=90pc)
 
 The Playwright application inside the container uses the task role. Grant only the permissions that the application actually requires, such as:
 
@@ -113,7 +113,7 @@ The Playwright application inside the container uses the task role. Grant only t
 
 The workshop screenshot demonstrates selecting S3 and CloudWatch Logs policies:
 
-![Policies for the ECS task role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/create-ecs-task-role.png?featherlight=false&width=90pc)
+![Policies for the ECS task role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/7-create-ecs-task-role.png?featherlight=false&width=90pc)
 
 Enter the role name:
 
@@ -121,7 +121,7 @@ Enter the role name:
 playwright-ecs-task-role
 ```
 
-![Name the ECS task role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/ecs-task-role-policies.png?featherlight=false&width=90pc)
+![Name the ECS task role](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/8-ecs-task-role-policies.png?featherlight=false&width=90pc)
 
 Then choose **Create role**.
 
@@ -137,7 +137,7 @@ playwright-ecs-execution-role
 playwright-ecs-task-role
 ```
 
-![Created IAM roles](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/lambda-role-policies.png?featherlight=false&width=90pc)
+![Created IAM roles](/images/5-Workshop/5.2-Prerequisite/5.2.3-configure-iam/9-lambda-role-policies.png?featherlight=false&width=90pc)
 
 When creating the ECS task definition later, configure:
 

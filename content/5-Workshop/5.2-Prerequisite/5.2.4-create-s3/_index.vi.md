@@ -37,7 +37,7 @@ Cấu hình:
 
 Giữ các thiết lập còn lại theo mặc định và chọn **Create bucket**.
 
-![Tạo bucket Web UI](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/create-webui-bucket.png?featherlight=false&width=90pc)
+![Tạo bucket Web UI](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/1-create-webui-bucket.png?featherlight=false&width=90pc)
 
 ---
 
@@ -54,7 +54,7 @@ icons.svg
 index.html
 ```
 
-![Các tệp trong bucket Web UI](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/webui-bucket-objects.png?featherlight=false&width=90pc)
+![Các tệp trong bucket Web UI](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/2-webui-bucket-objects.png?featherlight=false&width=90pc)
 
 ---
 
@@ -78,7 +78,7 @@ Chọn:
 
 Nếu frontend là ứng dụng SPA, có thể đặt **Error document** thành `index.html`. Sau đó chọn **Save changes**.
 
-![Bật static website hosting](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/edit-static.png?featherlight=false&width=90pc)
+![Bật static website hosting](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/3-edit-static.png?featherlight=false&width=90pc)
 
 {{% notice warning %}}
 Không public bucket báo cáo. Với môi trường production, nên giữ bucket Web UI ở chế độ private và cho CloudFront truy cập bằng Origin Access Control (OAC). Khi dùng OAC, hãy dùng S3 bucket origin thay vì S3 website endpoint.
@@ -100,7 +100,7 @@ Quay lại danh sách S3 bucket, chọn **Create bucket** và cấu hình:
 
 Giữ các thiết lập còn lại theo mặc định và chọn **Create bucket**.
 
-![Tạo bucket báo cáo](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/create-report-bucket.png?featherlight=false&width=90pc)
+![Tạo bucket báo cáo](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/4-create-report-bucket.png?featherlight=false&width=90pc)
 
 ---
 
@@ -117,7 +117,7 @@ test-scripts/
 
 Các thư mục này lần lượt lưu kết quả JSON, báo cáo HTML, ảnh chụp khi kiểm thử và kịch bản kiểm thử.
 
-![Cấu trúc bucket báo cáo](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/report-bucket-objects.png?featherlight=false&width=90pc)
+![Cấu trúc bucket báo cáo](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/5-report-bucket-objects.png?featherlight=false&width=90pc)
 
 ---
 
@@ -130,6 +130,6 @@ playwright-webui-12
 playwright-report-2026
 ```
 
-![Xác nhận các bucket đã tạo](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/verify-buckets.png?featherlight=false&width=90pc)
+![Xác nhận các bucket đã tạo](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/6-verify-buckets.png?featherlight=false&width=90pc)
 
 Sau khi hoàn tất, bucket Web UI sẵn sàng cho bước cấu hình CloudFront và bucket báo cáo sẵn sàng để Lambda lưu kết quả kiểm thử.
