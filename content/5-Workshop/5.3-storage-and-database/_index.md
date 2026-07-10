@@ -12,7 +12,7 @@ The system uses 2 DynamoDB tables: one storing the history of each test run, and
 
 **Step 1:** Go to the **DynamoDB Console**.
 
-![Access DynamoDB Console](/images/5-Workshop/5.3-Data-Storage/1-access-dynamodb-console.png)
+![Access DynamoDB Console](/images/5-Workshop/5.3-Data-Storage/1-access-dynamodb-console.png?featherlight=false&width=90pc)
 
 **Step 2:** Click **Create table**.
 
@@ -22,7 +22,7 @@ The system uses 2 DynamoDB tables: one storing the history of each test run, and
 
 **Step 4:** Enter **Partition key** = `task_id`, type **String**.
 
-![Create the playwright-test-history table](/images/5-Workshop/5.3-Data-Storage/3-create-test-history-table.png)
+![Create the playwright-test-history table](/images/5-Workshop/5.3-Data-Storage/3-create-test-history-table.png?featherlight=false&width=90pc)
 
 **Step 5:** Leave the other settings as default, click **Create table**.
 

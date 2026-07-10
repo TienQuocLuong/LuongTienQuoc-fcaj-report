@@ -12,7 +12,7 @@ Hệ thống dùng 2 bảng DynamoDB: một bảng lưu lịch sử mỗi lần 
 
 **Bước 1:** Truy cập **DynamoDB Console**.
 
-![Truy cập DynamoDB Console](/images/5-Workshop/5.3-Data-Storage/1-access-dynamodb-console.png)
+![Truy cập DynamoDB Console](/images/5-Workshop/5.3-Data-Storage/1-access-dynamodb-console.png?featherlight=false&width=90pc)
 
 **Bước 2:** Bấm **Create table**.
 
@@ -22,11 +22,11 @@ Hệ thống dùng 2 bảng DynamoDB: một bảng lưu lịch sử mỗi lần 
 
 **Bước 4:** Điền **Partition key** = `task_id`, kiểu **String**.
 
-![Tạo bảng playwright-test-history](/images/5-Workshop/5.3-Data-Storage/3-create-test-history-table.png)
+![Tạo bảng playwright-test-history](/images/5-Workshop/5.3-Data-Storage/3-create-test-history-table.png?featherlight=false&width=90pc)
 
 **Bước 5:** Các cài đặt khác để mặc định, bấm **Create table**.
 
-![Create table playwright-test-history](/images/5-Workshop/5.3-Data-Storage/4-create-test-history-table.png)
+![Create table playwright-test-history](/images/5-Workshop/5.3-Data-Storage/4-create-test-history-table.png?featherlight=false&width=90pc)
 
 **Bước 6:** Bấm **Create table** một lần nữa để tạo bảng thứ hai.
 

@@ -22,7 +22,7 @@ pre : " <b> 5.4. </b> "
 
 **Step 5:** Click **Create queue** again, name it `playwright-task-queue`.
 
-![Create the playwright task queue](/images/5-Workshop/5.4-Queue-VPC-Endpoints/3-create-ptq.png)
+![Create the playwright task queue](/images/5-Workshop/5.4-Queue-VPC-Endpoints/3-create-ptq.png?featherlight=false&width=90pc)
 
 **Step 6:** Scroll down to the **Dead-letter queue** section, turn on **Enabled**.
 
@@ -44,7 +44,7 @@ pre : " <b> 5.4. </b> "
 
 **Step 4:** In the search box under Services, type: `com.amazonaws.ap-southeast-1.s3`.
 
-![Search for the S3 service](/images/5-Workshop/5.4-Queue-VPC-Endpoints/5-s3-search.png)
+![Search for the S3 service](/images/5-Workshop/5.4-Queue-VPC-Endpoints/5-s3-search.png?featherlight=false&width=90pc)
 
 **Step 5:** The results table will show 2 rows with the same service name — tick the one whose **Type = Gateway** (don't select the Interface row below it).
 
@@ -58,7 +58,7 @@ pre : " <b> 5.4. </b> "
 
 **Step 10:** Click the orange **Create endpoint** button in the bottom-right corner.
 
-![S3 endpoint created](/images/5-Workshop/5.4-Queue-VPC-Endpoints/6-s3-created.png)
+![S3 endpoint created](/images/5-Workshop/5.4-Queue-VPC-Endpoints/6-s3-created.png?featherlight=false&width=90pc)
 
 ---
 
@@ -153,8 +153,8 @@ pre : " <b> 5.4. </b> "
 **Step 3:** Check that **Private DNS names enabled** = **Yes**. If it's No, click **Actions → Modify private DNS name** to enable it.
 
 ![Check Private DNS names enabled - api](/images/5-Workshop/5.4-Queue-VPC-Endpoints/13-check-private-dns-api.png?featherlight=false&width=90pc ) 
-![Check Private DNS names enabled - dkr](/images/5-Workshop/5.4-Queue-VPC-Endpoints/14-check-private-dns-dkr.png)
-![Check Private DNS names enabled - logs](/images/5-Workshop/5.4-Queue-VPC-Endpoints/15-check-private-dns-logs.png)
+![Check Private DNS names enabled - dkr](/images/5-Workshop/5.4-Queue-VPC-Endpoints/14-check-private-dns-dkr.png?featherlight=false&width=90pc)
+![Check Private DNS names enabled - logs](/images/5-Workshop/5.4-Queue-VPC-Endpoints/15-check-private-dns-logs.png?featherlight=false&width=90pc)
 
 #### Verification
 

@@ -22,7 +22,7 @@ pre : " <b> 5.4. </b> "
 
 **Bước 5:** Bấm **Create queue** một lần nữa, đặt tên `playwright-task-queue`.
 
-![Tạo playwright task queue](/images/5-Workshop/5.4-Queue-VPC-Endpoints/3-create-ptq.png)
+![Tạo playwright task queue](/images/5-Workshop/5.4-Queue-VPC-Endpoints/3-create-ptq.png?featherlight=false&width=90pc)
 
 **Bước 6:** Kéo xuống mục **Dead-letter queue**, bật **Enabled**.
 
@@ -44,7 +44,7 @@ pre : " <b> 5.4. </b> "
 
 **Bước 4:** Ở ô tìm kiếm trong khung Services, gõ: `com.amazonaws.ap-southeast-1.s3`.
 
-![Tìm service S3](/images/5-Workshop/5.4-Queue-VPC-Endpoints/5-s3-search.png)
+![Tìm service S3](/images/5-Workshop/5.4-Queue-VPC-Endpoints/5-s3-search.png?featherlight=false&width=90pc)
 
 **Bước 5:** Trong bảng kết quả sẽ hiện 2 dòng cùng service name — tick chọn đúng dòng có cột **Type = Gateway** (đừng chọn dòng Interface bên dưới).
 
@@ -58,7 +58,7 @@ pre : " <b> 5.4. </b> "
 
 **Bước 10:** Bấm nút **Create endpoint** màu cam ở góc dưới phải.
 
-![Endpoint S3 đã được tạo](/images/5-Workshop/5.4-Queue-VPC-Endpoints/6-s3-created.png)
+![Endpoint S3 đã được tạo](/images/5-Workshop/5.4-Queue-VPC-Endpoints/6-s3-created.png?featherlight=false&width=90pc)
 
 ---
 
@@ -153,8 +153,8 @@ pre : " <b> 5.4. </b> "
 **Bước 3:** Kiểm tra dòng **Private DNS names enabled** = **Yes**. Nếu là No, bấm **Actions → Modify private DNS name** để bật.
 
 ![Kiểm tra Private DNS names enabled api ](/images/5-Workshop/5.4-Queue-VPC-Endpoints/13-check-private-dns-api.png?featherlight=false&width=90pc ) 
-![Kiểm tra Private DNS names enabled dkr](/images/5-Workshop/5.4-Queue-VPC-Endpoints/14-check-private-dns-dkr.png)
-![Kiểm tra Private DNS names enabled blogs](/images/5-Workshop/5.4-Queue-VPC-Endpoints/15-check-private-dns-logs.png)
+![Kiểm tra Private DNS names enabled dkr](/images/5-Workshop/5.4-Queue-VPC-Endpoints/14-check-private-dns-dkr.png?featherlight=false&width=90pc)
+![Kiểm tra Private DNS names enabled blogs](/images/5-Workshop/5.4-Queue-VPC-Endpoints/15-check-private-dns-logs.png?featherlight=false&width=90pc)
 
 #### Kiểm tra
 
