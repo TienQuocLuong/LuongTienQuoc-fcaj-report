@@ -1,6 +1,6 @@
 ---
 title : "Bảo mật & Thông báo"
-date : 2024-01-01 
+date : 2026-06-19
 weight : 8
 chapter : false
 pre : " <b> 5.8.2 </b> "
@@ -23,10 +23,12 @@ pre : " <b> 5.8.2 </b> "
 ![Tạo Verified Identity trên SES](/images/5-Workshop/5.8-secrets-and-notification/5.8.2-notification/1-create-identity.png?featherlight=false&width=90pc)
  
 **Bước 6:** AWS sẽ gửi 1 email xác nhận đến địa chỉ vừa nhập → mở hộp thư, bấm link **Verify** trong email đó.
+
+![Verify email](/images/5-Workshop/5.8-secrets-and-notification/5.8.2-notification/3-send-test-email-form.jpg?featherlight=false&width=90pc)
  
 **Bước 7:** Quay lại SES Console, refresh — status của identity phải chuyển từ **Pending verification** sang **Verified**.
  
-![Identity đã chuyển sang Verified](/images/5-Workshop/5.8-secrets-and-notification/5.8.2-ses/02-identity-verified.png?featherlight=false&width=90pc)
+![Identity đã chuyển sang Verified](/images/5-Workshop/5.8-secrets-and-notification/5.8.2-notification/2-identity-verified.png?featherlight=false&width=90pc)
  
 ---
  
@@ -44,13 +46,13 @@ pre : " <b> 5.8.2 </b> "
  
 **Bước 6:** Điền Subject/Body: nhập nội dung test bất kỳ, ví dụ "Test SES Playwright System".
  
-![Điền thông tin test email](/images/5-Workshop/5.8-secrets-and-notification/5.8.2-ses/03-send-test-email-form.png?featherlight=false&width=90pc)
- 
 **Bước 7:** Bấm **Send test email**.
  
+ ![Điền thông tin test email](/images/5-Workshop/5.8-secrets-and-notification/5.8.2-notification/4-Send-test-email.png?featherlight=false&width=90pc)
+
 **Bước 8:** Kiểm tra hộp thư đến của To-address — phải nhận được email.
- 
-![Email test đã nhận được](/images/5-Workshop/5.8-secrets-and-notification/5.8.2-ses/04-test-email-received.png?featherlight=false&width=90pc)
+
+![Điền thông tin test email](/images/5-Workshop/5.8-secrets-and-notification/5.8.2-notification/5-mail.png?featherlight=false&width=90pc)
  
 ---
  

@@ -1,6 +1,6 @@
 ---
 title : "Lambda Functions"
-date : 2026-07-10
+date : 2026-06-18
 weight : 7
 chapter : false
 pre : " <b> 5.7. </b> "
