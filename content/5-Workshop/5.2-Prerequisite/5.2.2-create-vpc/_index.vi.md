@@ -17,7 +17,7 @@ Trong phần này, chúng ta sẽ tự tay xây dựng hạ tầng mạng từ c
 - **Name tag:** Điền tên cho VPC (ví dụ: `playwright-vpc`).
 - **IPv4 CIDR block:** Chọn *IPv4 CIDR manual input* và điền dải mạng `10.0.0.0/16`.
 
-![Cấu hình VPC phần trên](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/2-vpc-name-cidr.png?featherlight=false&width=90pc)
+![Cấu hình VPC phần trên](/images/5-Workshop/5.2-Prerequisite/5.2.2-create-vpc/1-vpc-name-cidr.png?featherlight=false&width=90pc)
 
 **Bước 3:** Cuộn xuống phần **Tags** (hệ thống đã tự động điền từ bước trên). Bạn giữ nguyên các cấu hình mặc định còn lại và bấm nút **Create VPC** màu cam.
 
