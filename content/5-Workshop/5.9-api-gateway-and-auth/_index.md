@@ -20,7 +20,7 @@ Set up sign-in, user authorization, and an API gateway for the Frontend to commu
 **Step 2:** Click the orange **Create user pool** button.
 
 **Step 3:** On the **Configure sign-in experience** page: keep Provider types as **Cognito user pool**; under Sign-in options, tick **Email**. Click **Next**.
-
+![alt text](/images/5-Workshop/5.9-api-gateway-and-auth/1.3.png?featherlight=false&width=90pc)
 **Step 4:** On the **Configure security requirements** page: under Password policy, select **Cognito defaults**; under Multi-factor authentication, select **No MFA**. Click **Next**.
 
 **Step 5:** On the **Configure sign-up experience** page: under Required attributes for sign-up, tick **email**. Leave the rest at default. Click **Next**.
@@ -38,7 +38,7 @@ Set up sign-in, user authorization, and an API gateway for the Frontend to commu
 
 **Step 10:** Click **Next**, review the full configuration on the **Review and create** page, click **Create user pool**.
 
-![User pool playwright-user-pool created](/images/5-Workshop/5.9-Api-gateway-and-auth/1-user-pool-created.png?featherlight=false&width=90pc)
+![User pool playwright-user-pool created](/images/5-Workshop/5.9-api-gateway-and-auth/1-user-pool-created.png?featherlight=false&width=90pc)
 
 ---
 
@@ -51,12 +51,13 @@ Set up sign-in, user authorization, and an API gateway for the Frontend to commu
 **Step 3:** Click **Create group**.
 
 **Step 4:** Enter Group name = `Admin`, leave the other fields blank, click **Create group**.
+![alt text](/images/5-Workshop/5.9-api-gateway-and-auth/2.4.png?featherlight=false&width=90pc)
 
 **Step 5:** Click **Create group** again, enter Group name = `Developer`, click **Create group**.
 
 **Step 6:** Click **Create group** again, enter Group name = `QA`, click **Create group**.
 
-![3 groups Admin, Developer, QA created](/images/5-Workshop/5.9-Api-gateway-and-auth/2-groups-created.png?featherlight=false&width=90pc)
+![3 groups Admin, Developer, QA created](/images/5-Workshop/5.9-api-gateway-and-auth/2-groups-created.png?featherlight=false&width=90pc)
 
 **Step 7:** Still in the left-hand menu, open **Applications** → click **App clients**.
 
@@ -73,14 +74,14 @@ Set up sign-in, user authorization, and an API gateway for the Frontend to commu
 **Step 3:** Under Invitation message: select **Don't send an invitation**.
 
 **Step 4:** Enter Email address = `Admin-test@gmail.com`, tick **Mark email address as verified** if you want to skip the email verification step (not required for internal test accounts).
-
+![alt text](/images/5-Workshop/5.9-api-gateway-and-auth/3.4.png?featherlight=false&width=90pc)
 **Step 5:** Set a Temporary password (or let Cognito generate one), click **Create user**.
 
 **Step 6:** Repeat Steps 2-5 to create user `Dev-test@gmail.com`.
 
 **Step 7:** Repeat Steps 2-5 to create user `Qa-test@gmail.com`.
 
-![3 test accounts created, Enabled status](/images/5-Workshop/5.9-Api-gateway-and-auth/3-test-users-created.png?featherlight=false&width=90pc)
+![3 test accounts created, Enabled status](/images/5-Workshop/5.9-api-gateway-and-auth/3-test-users-created.png?featherlight=false&width=90pc)
 
 ---
 
@@ -92,19 +93,19 @@ Set up sign-in, user authorization, and an API gateway for the Frontend to commu
 
 **Step 3:** Tick Group **Admin**, click **Add**.
 
-![User Admin-test assigned to the Admin group](/images/5-Workshop/5.9-Api-gateway-and-auth/4-user-admin-added.png?featherlight=false&width=90pc)
+![User Admin-test assigned to the Admin group](/images/5-Workshop/5.9-api-gateway-and-auth/4-user-admin-added.png?featherlight=false&width=90pc)
 
 **Step 4:** Go back to the **Users** list, click on user `Dev-test@gmail.com`.
 
 **Step 5:** Scroll down to **Group memberships**, click **Add user to group**, tick Group **Developer**, click **Add**.
 
-![User Dev-test assigned to the Developer group](/images/5-Workshop/5.9-Api-gateway-and-auth/5-user-developer-added.png?featherlight=false&width=90pc)
+![User Dev-test assigned to the Developer group](/images/5-Workshop/5.9-api-gateway-and-auth/5-user-developer-added.png?featherlight=false&width=90pc)
 
 **Step 6:** Go back to the **Users** list, click on user `Qa-test@gmail.com`.
 
 **Step 7:** Scroll down to **Group memberships**, click **Add user to group**, tick Group **QA**, click **Add**.
 
-![User Qa-test assigned to the QA group](/images/5-Workshop/5.9-Api-gateway-and-auth/6-user-qa-added.png?featherlight=false&width=90pc)
+![User Qa-test assigned to the QA group](/images/5-Workshop/5.9-api-gateway-and-auth/6-user-qa-added.png?featherlight=false&width=90pc)
 
 ---
 
@@ -115,22 +116,22 @@ Set up sign-in, user authorization, and an API gateway for the Frontend to commu
 **Step 2:** In the left-hand menu, click **APIs** → click the orange **Create API** button.
 
 **Step 3:** Under **HTTP API**, click **Build** (don't choose REST API — HTTP API is simpler and sufficient for this workshop).
-
+![alt text](/images/5-Workshop/5.9-api-gateway-and-auth/5.3.png?featherlight=false&width=90pc)
 **Step 4:** On the **Create and configure integrations** page: click **Add integration** → select **Lambda**.
 
 **Step 5:** In the Lambda function dropdown, select `playwright-api-backend`. Set **API name** = `playwright-api`. Click **Next**.
-
+![alt text](/images/5-Workshop/5.9-api-gateway-and-auth/Screenshot%202026-07-10%20220935.png?featherlight=false&width=90pc)
 **Step 6:** On the **Configure routes** page (optional): select Method **POST**, enter Resource path `/trigger`, leave the Integration target as `playwright-api-backend (Lambda)`. Click **Next**.
 
 **Step 7:** On the **Define stages** page (optional): keep the default Stage name = `$default`, Auto-deploy = **enabled**. Click **Next**.
-
+![alt text](/images/5-Workshop/5.9-api-gateway-and-auth/5.7.png?featherlight=false&width=90pc)
 **Step 8:** On the **Review and create** page, verify all 3 sections: **API name and integrations** (playwright-api, playwright-api-backend), **Routes** (POST /trigger → playwright-api-backend), **Stages** ($default, Auto-deploy: enabled). Click **Create**.
 
-![Review and create before creating the API](/images/5-Workshop/5.9-Api-gateway-and-auth/7a-review-create-api.png?featherlight=false&width=90pc)
+![Review and create before creating the API](/images/5-Workshop/5.9-api-gateway-and-auth/7a-review-create-api.png?featherlight=false&width=90pc)
 
 **Step 9:** Confirm the message **"Successfully created API playwright-api (8bsb7jbhu7)"** — the auto-generated API ID will differ for you.
 
-![API playwright-api created successfully](/images/5-Workshop/5.9-Api-gateway-and-auth/7b-api-created.png?featherlight=false&width=90pc)
+![API playwright-api created successfully](/images/5-Workshop/5.9-api-gateway-and-auth/7b-api-created.png?featherlight=false&width=90pc)
 
 ---
 
@@ -152,7 +153,7 @@ Set up sign-in, user authorization, and an API gateway for the Frontend to commu
 
 **Step 8:** Click **Create**, confirm the message **"Successfully created authorizer 'cognito-authorizer'"**.
 
-![Authorizer cognito-authorizer created](/images/5-Workshop/5.9-Api-gateway-and-auth/8a-authorizer-created.png?featherlight=false&width=90pc)
+![Authorizer cognito-authorizer created](/images/5-Workshop/5.9-api-gateway-and-auth/8a-authorizer-created.png?featherlight=false&width=90pc)
 
 **Step 9:** Switch to the **Attach authorizers to routes** tab.
 
@@ -160,7 +161,7 @@ Set up sign-in, user authorization, and an API gateway for the Frontend to commu
 
 **Step 11:** In the right-hand panel **Authorizer for route POST /trigger**, select `cognito-authorizer`, confirm the route shows a green **JWT Auth** badge.
 
-![Route POST /trigger with JWT Auth attached](/images/5-Workshop/5.9-Api-gateway-and-auth/8b-route-jwt-attached.png?featherlight=false&width=90pc)
+![Route POST /trigger with JWT Auth attached](/images/5-Workshop/5.9-api-gateway-and-auth/8b-route-jwt-attached.png?featherlight=false&width=90pc)
 
 *(Note: The right-hand panel will show the Identity source, Issuer, and Audience you just configured — useful for a quick check if you hit a 401 error later on.)*
 
@@ -174,7 +175,7 @@ Set up sign-in, user authorization, and an API gateway for the Frontend to commu
 
 **Step 3:** In the **Stage details** panel, copy the **Invoke URL**, e.g. in the form `https://8bsb7jbhu7.execute-api.ap-southeast-1.amazonaws.com` — this will be used in section 5.10 (Frontend).
 
-![Stage $default with the Invoke URL](/images/5-Workshop/5.9-Api-gateway-and-auth/9-stage-invoke-url.png?featherlight=false&width=90pc)
+![Stage $default with the Invoke URL](/images/5-Workshop/5.9-api-gateway-and-auth/9-stage-invoke-url.png?featherlight=false&width=90pc)
 
 ---
 
@@ -186,3 +187,7 @@ curl -X POST <invoke-url>/trigger -H "Authorization: Bearer <JWT>" -d '{"target_
 ```
 → should receive a correct response, no 401/403 errors.
 - If you get a 401 error even with a valid token, double-check the two Authorizer values: **Issuer** must be in the form `https://cognito-idp.ap-southeast-1.amazonaws.com/<user-pool-id>`, and **Audience** must match the correct App Client — either one being wrong will always return 401.
+
+---
+
+Next, we will move on to **[5.10. Frontend](../5.10-frontend/)** to deploy the Dashboard UI to S3 and CloudFront.

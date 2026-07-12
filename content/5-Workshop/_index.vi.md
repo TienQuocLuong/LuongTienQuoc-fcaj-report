@@ -1,35 +1,30 @@
----
+﻿---
 title: "Workshop"
-date: 2026-06-12
+date : 2026-07-10
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
+# Xây dựng hệ thống Serverless Playwright trên AWS
 
-# Hệ Thống Tự Động Kiểm Thử Playwright Bằng Docker Trên AWS (Cloud-Native Architecture)
+#### Tổng quan
 
-Dự án xây dựng một nền tảng kiểm thử tự động nội bộ cho các ứng dụng web của doanh nghiệp, với mục tiêu cốt lõi là loại bỏ hoàn toàn việc con người phải ngồi canh và tự tay chạy kiểm thử mỗi khi cần kiểm tra chất lượng một website. Hệ thống dùng Playwright để giả lập hành vi người dùng thật trên trình duyệt — click, nhập liệu, điều hướng trang, kiểm tra kết quả hiển thị — sau đó AI sẽ đọc log và tóm tắt gửi về email. Toàn bộ quá trình được đóng gói trong Docker container để đảm bảo môi trường chạy test luôn nhất quán, và vận hành trên AWS theo kiến trúc Cloud-Native hướng sự kiện, không máy chủ thường trực — hệ thống không chạy liên tục 24/7 mà chỉ hoạt động khi có việc, tránh phí duy trì lãng phí.
+Trong bài workshop này, bạn sẽ học cách xây dựng một hệ thống kiểm thử tự động (end-to-end testing) sử dụng **Playwright**, được đóng gói bằng **Docker** và triển khai trên **AWS Fargate**. Hệ thống sử dụng kiến trúc serverless được điều phối bởi **AWS Lambda**, **SQS** và **EventBridge**.
 
-Nhìn từ góc độ người dùng, hệ thống chia làm hai phần: **Backend Engine** (không ai nhìn thấy trực tiếp — nhận lệnh kiểm thử, dựng môi trường, chạy Playwright, ghi log, xuất báo cáo, rồi tự dọn dẹp) và **Dashboard Console** (giao diện con người thực sự chạm vào — theo dõi tình trạng test, quản lý kịch bản, cấu hình người nhận thông báo, phân quyền truy cập).
+Bạn sẽ tiến hành triển khai từng bước các thành phần cốt lõi, từ việc cấu hình mạng bảo mật (VPC), thiết lập lưu trữ và hàng đợi, build Docker image, cho đến việc cung cấp API và giao diện Frontend cho người dùng.
 
-Hệ thống chia theo 3 vai trò: **Admin** cấu hình lịch tự động và quản lý quyền hạn thông báo; **QA/Tester** có thể tự bấm nút kiểm tra ngay khi cần và quản lý kịch bản test; **Developer** chỉ xem kết quả. AI chỉ tham gia ở bước cuối cùng để tóm tắt log thành văn bản dễ hiểu, không tham gia vào việc kiểm tra web.
+#### Nội dung
 
-### Nội dung
-1. [Tổng quan](5.1-workshop-overview/)
-2. [Chuẩn bị](5.2-prerequiste/)
-3. [Thiết lập hạ tầng](5.3-infrastructure-setup/)
-   * 3.1 Networking (VPC)
-   * 3.2 Lưu trữ & Dữ liệu (S3, ECR, DynamoDB)
-   * 3.3 Hàng đợi & IAM (SQS, VPC Endpoints, IAM Roles)
-4. [Triển khai ứng dụng](5.4-application-deployment/)
-   * 4.1 Docker Image
-   * 4.2 ECS Cluster & Task Definition
-   * 4.3 Các Lambda Function
-5. [Tích hợp & Phân quyền](5.5-integration-access/)
-   * 5.1 Secrets & SES
-   * 5.2 Xác thực & API Gateway (Cognito)
-   * 5.3 Frontend (S3 + CloudFront)
-   * 5.4 Lên lịch tự động với EventBridge
-6. [Kiểm thử & Dọn dẹp](5.6-testing-cleanup/)
-   * 6.1 Kiểm thử toàn luồng (End-to-End)
-   * 6.2 Dọn dẹp tài nguyên
+1. [Tổng quan về workshop](5.1-Workshop-overview/)
+2. [Chuẩn bị](5.2-Prerequisite/)
+3. [Lưu trữ & Cơ sở dữ liệu](5.3-storage-and-database/)
+4. [Hàng đợi & VPC Endpoints](5.4-queue-and-endpoints/)
+5. [Docker Image](5.5-docker-image/)
+6. [ECS Cluster & Task Definition](5.6-ecs-cluster/)
+7. [Lambda Functions](5.7-lambda-functions/)
+8. [Bảo mật & Thông báo](5.8-secrets-and-notification/)
+9. [Xác thực & API Gateway](5.9-api-gateway-and-auth/)
+10. [Giao diện Frontend](5.10-frontend/)
+11. [Lập lịch với EventBridge](5.11-eventbridge/)
+12. [Kiểm thử End-to-End](5.12-end-to-end-test/)
+13. [Dọn dẹp tài nguyên](5.13-cleanup/)

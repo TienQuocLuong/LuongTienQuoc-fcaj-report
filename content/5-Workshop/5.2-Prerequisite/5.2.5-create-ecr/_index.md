@@ -41,7 +41,7 @@ playwright-runner
 
 Keep **Image tag mutability** as `Mutable`, enable scan on push, and keep encryption as `AES-256`. Then select **Create repository**.
 
-![Configure the ECR repository](/images/5-Workshop/5.2-Prerequisite/5.2.5-create-ecr/1-create-repository.png?featherlight=false&width=90pc)
+![Configure the ECR repository](/images/5-Workshop/5.2-Prerequisite/5.2.5-create-ecr/create-repository.png?featherlight=false&width=90pc)
 
 {{% notice note %}}
 `Mutable` is fine for a workshop since the `latest` tag can be updated. In production, prefer immutable version tags such as a Git commit SHA and consider selecting `Immutable`.
@@ -53,7 +53,7 @@ Keep **Image tag mutability** as `Mutable`, enable scan on push, and keep encryp
 
 Once created successfully, the **Private repositories** list will show `playwright-runner` along with its URI, tag mode, and encryption type.
 
-![Repository created](/images/5-Workshop/5.2-Prerequisite/5.2.5-create-ecr/2-repository-created.png?featherlight=false&width=90pc)
+![Repository created](/images/5-Workshop/5.2-Prerequisite/5.2.5-create-ecr/repository-created.png?featherlight=false&width=90pc)
 
 Open the repository and verify:
 
@@ -62,7 +62,7 @@ Open the repository and verify:
 - Encryption type: `AES-256`
 - Scan frequency: `Scan on push`
 
-![Repository details](/images/5-Workshop/5.2-Prerequisite/5.2.5-create-ecr/3-repository-details.png?featherlight=false&width=90pc)
+![Repository details](/images/5-Workshop/5.2-Prerequisite/5.2.5-create-ecr/repository-details.png?featherlight=false&width=90pc)
 
 ---
 
@@ -70,7 +70,7 @@ Open the repository and verify:
 
 In the repository, select **View push commands**, then select the **Windows** tab. AWS will display commands specific to your current account and Region.
 
-![Push commands on Windows](/images/5-Workshop/5.2-Prerequisite/5.2.5-create-ecr/4-view-push-commands-windows.png?featherlight=false&width=90pc)
+![Push commands on Windows](/images/5-Workshop/5.2-Prerequisite/5.2.5-create-ecr/view-push-commands-windows.png?featherlight=false&width=90pc)
 
 ---
 

@@ -38,7 +38,7 @@ Choose **AWS Secrets Manager**, then click:
 Store a new secret
 ```
 
-![Open AWS Secrets Manager](/images/5-Workshop/5.8-secrets-and-notification/5.8-secrets-and-notification/5.8.1-secrets-manager/01-store-new-secret.png?featherlight=false&width=90pc)
+![Open AWS Secrets Manager](/images/5-Workshop/5.8-secrets-and-notification/5.8.1-secrets-manager/01-store-new-secret.png?featherlight=false&width=90pc)
 
 ---
 
@@ -66,7 +66,7 @@ aws/secretsmanager
 
 Then choose **Next**.
 
-![Choose the secret type and enter the API key](/images/5-Workshop/5.8-secrets-and-notification/5.8-secrets-and-notification/5.8.1-secrets-manager/02-configure-secret-value.png?featherlight=false&width=90pc)
+![Choose the secret type and enter the API key](/images/5-Workshop/5.8-secrets-and-notification/5.8.1-secrets-manager/02-configure-secret-value.png?featherlight=false&width=90pc)
 
 {{% notice warning %}}
 Never expose your real API Key in screenshots or public repositories. Blur or hide the value before publishing.
@@ -85,7 +85,7 @@ Enter the following information:
 
 Then choose **Next**.
 
-![Configure the secret name](/images/5-Workshop/5.8-secrets-and-notification/5.8-secrets-and-notification/5.8.1-secrets-manager/03-configure-secret-name.png?featherlight=false&width=90pc)
+![Configure the secret name](/images/5-Workshop/5.8-secrets-and-notification/5.8.1-secrets-manager/03-configure-secret-name.png?featherlight=false&width=90pc)
 
 ---
 
@@ -139,7 +139,7 @@ The page should display:
 - Secret ARN
 - Encryption key
 
-![Secret created successfully](/images/5-Workshop/5.8-secrets-and-notification/5.8-secrets-and-notification/5.8.1-secrets-manager/04-secret-created.png?featherlight=false&width=90pc)
+![Secret created successfully](/images/5-Workshop/5.8-secrets-and-notification/5.8.1-secrets-manager/04-secret-created.png?featherlight=false&width=90pc)
 
 Do **not** click **Retrieve secret value** when taking screenshots because the API Key will be displayed.
 
@@ -235,3 +235,7 @@ Call AI API
 ```
 
 The AI API Key is now securely stored and can be accessed only by the Lambda function through AWS Secrets Manager.
+
+---
+
+Next, we will move on to **[5.8.2. SES Email Notification](../5.8.2-notification/)** to configure the email notification channel.

@@ -1,4 +1,4 @@
-﻿---
+---
 title : "Lambda Functions"
 date : 2026-07-10
 weight : 7
@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 5.7. </b> "
 ---
 
-### Overview
+#### Overview
 
 In this section, you will deploy four AWS Lambda functions that form the core orchestration layer of the serverless Playwright testing system. These functions handle API requests, coordinate ECS tasks, manage errors, and process post-test reports.
 
@@ -18,7 +18,7 @@ You will configure the following functions:
 
 ---
 
-### 1. Create `playwright-api-backend`
+#### 1. Create `playwright-api-backend`
 
 This function acts as the integration point for your API Gateway.
 
@@ -31,17 +31,17 @@ This function acts as the integration point for your API Gateway.
 **Step 4:** Set the **Function name** to `playwright-api-backend`.
 
 **Step 5:** Select `Python 3.14` (or the latest available Python version) as the **Runtime**.
-![Create API Backend](/images/5-Workshop/5.7-lambda-functions/1-create-function-api-backend.png)
+![Create API Backend](/images/5-Workshop/5.7-lambda-functions/create-function-api-backend.png)
 
 **Step 6:** Under **Permissions**, expand **Change default execution role**.
 
 **Step 7:** Select **Use an existing role** and choose the `playwright-lambda-role` that was created in the prerequisite phase.
-![Execution Role](/images/5-Workshop/5.7-lambda-functions/2-create-function-role.png)
+![Execution Role](/images/5-Workshop/5.7-lambda-functions/create-function-role.png)
 
 **Step 8:** Click **Create function**.
 
 **Step 9:** Scroll down to the **Code source** section, click **Upload from** and select **.zip file**. Choose the `playwright-api-backend.zip` file you prepared in the Prerequisites section and click **Save**.
-![Upload ZIP](/images/5-Workshop/5.7-lambda-functions/3-upload-zip.png)
+![Upload ZIP](/images/5-Workshop/5.7-lambda-functions/upload-zip.png)
 
 **Step 10:** Navigate to the **Configuration** tab, then select **Environment variables**. Click **Edit**.
 
@@ -53,11 +53,11 @@ This function acts as the integration point for your API Gateway.
    - `TASK_QUEUE_URL`: The URL of your `playwright-task-queue`
    - `TEST_HISTORY_TABLE`: `playwright-test-history`
    - `TEST_SUITES_TABLE`: `playwright-test-suites`
-![API Backend Environment Variables](/images/5-Workshop/5.7-lambda-functions/4-env-vars-api-backend.png)
+![API Backend Environment Variables](/images/5-Workshop/5.7-lambda-functions/env-vars-api-backend.png)
 
 ---
 
-### 2. Create `playwright-coordinator`
+#### 2. Create `playwright-coordinator`
 
 This function listens to the task queue and launches the ECS Fargate tasks.
 
@@ -72,7 +72,7 @@ This function listens to the task queue and launches the ECS Fargate tasks.
 **Step 5:** Choose the `playwright-task-queue` you created earlier.
 
 **Step 6:** Set the **Batch size** to `1`. This ensures that each ECS task is launched individually per request. Click **Add**.
-![Coordinator SQS Trigger](/images/5-Workshop/5.7-lambda-functions/5-sqs-trigger-coordinator.png)
+![Coordinator SQS Trigger](/images/5-Workshop/5.7-lambda-functions/sqs-trigger-coordinator.png)
 
 **Step 7:** Go to the **Configuration** tab, select **General configuration**, and click **Edit**.
 
@@ -86,11 +86,11 @@ This function listens to the task queue and launches the ECS Fargate tasks.
    - `SECURITY_GROUP_IDS`: Your ECS Security Group ID (e.g., `sg-...`)
    - `SUBNET_IDS`: Your Private Subnet ID (e.g., `subnet-...`)
    - `TEST_HISTORY_TABLE`: `playwright-test-history`
-![Coordinator Environment Variables](/images/5-Workshop/5.7-lambda-functions/6-env-vars-coordinator.png)
+![Coordinator Environment Variables](/images/5-Workshop/5.7-lambda-functions/env-vars-coordinator.png)
 
 ---
 
-### 3. Create `playwright-error-handler`
+#### 3. Create `playwright-error-handler`
 
 This function processes messages that fail to be processed by the coordinator.
 
@@ -103,16 +103,16 @@ This function processes messages that fail to be processed by the coordinator.
 **Step 4:** Select **SQS** and choose the `playwright-dlq` (Dead Letter Queue).
 
 **Step 5:** Set the **Batch size** to `3`. Click **Add**.
-![Error Handler SQS Trigger](/images/5-Workshop/5.7-lambda-functions/7-sqs-trigger-error-handler.png)
+![Error Handler SQS Trigger](/images/5-Workshop/5.7-lambda-functions/sqs-trigger-error-handler.png)
 
 **Step 6:** Navigate to **Environment variables** and add the following:
    - `ERROR_DYNAMODB_TABLE`: `playwright-error-log`
    - `TEST_HISTORY_TABLE`: `playwright-test-history`
-![Error Handler Environment Variables](/images/5-Workshop/5.7-lambda-functions/8-env-vars-error-handler.png)
+![Error Handler Environment Variables](/images/5-Workshop/5.7-lambda-functions/env-vars-error-handler.png)
 
 ---
 
-### 4. Create `playwright-postprocessing`
+#### 4. Create `playwright-postprocessing`
 
 This function is triggered by EventBridge after an ECS task finishes. It processes execution logs, calls the OpenAI API for analysis, and sends email notifications via SES.
 
@@ -130,16 +130,16 @@ This function is triggered by EventBridge after an ECS task finishes. It process
    - **VPC**: Select your `playwright-vpc`
    - **Subnets**: Select `playwright-private-subnet`
    - **Security groups**: Select `playwright-sg-lambda`
-![Postprocessing VPC Configuration](/images/5-Workshop/5.7-lambda-functions/9-postprocessing-vpc.png)
+![Postprocessing VPC Configuration](/images/5-Workshop/5.7-lambda-functions/postprocessing-vpc.png)
 
 **Step 7:** Select **Environment variables** and click **Edit**. Add the following:
-   - EMAIL_CONFIG_TABLE: playwright-email-config
-   - LOG_GROUP_NAME: /ecs/playwright-runner
-   - OPENAI_SECRET_NAME: playwright/openai-api-key
-   - REPORT_BUCKET: playwright-report-2026
-   - SES_SENDER_EMAIL: Your verified SES sender email address
-   - TEST_HISTORY_TABLE: playwright-test-history
-![Postprocessing Environment Variables](/images/5-Workshop/5.7-lambda-functions/10-postprocessing-env-vars.png)
+   - `EMAIL_CONFIG_TABLE`: `playwright-email-config`
+   - `LOG_GROUP_NAME`: `/ecs/playwright-runner`
+   - `OPENAI_SECRET_NAME`: `playwright/openai-api-key`
+   - `REPORT_BUCKET`: `playwright-report-2026`
+   - `SES_SENDER_EMAIL`: Your verified SES sender email address
+   - `TEST_HISTORY_TABLE`: `playwright-test-history`
+![Postprocessing Environment Variables](/images/5-Workshop/5.7-lambda-functions/postprocessing-env-vars.png)
 
 
 > [!NOTE]

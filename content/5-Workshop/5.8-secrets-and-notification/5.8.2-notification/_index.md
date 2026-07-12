@@ -1,13 +1,10 @@
 ---
-title : "Secrets & Notification"
+title : "SES Email Notification"
 date : 2026-06-19
-weight : 8
+weight : 2
 chapter : false
 pre : " <b> 5.8.2 </b> "
 ---
-
-
- 
 #### Part 1: Verify the Sender Email in SES
  
 **Step 1:** Go to the **Amazon SES Console** (make sure you're in the `ap-southeast-1` region).
@@ -23,8 +20,6 @@ pre : " <b> 5.8.2 </b> "
 ![Create a Verified Identity in SES](/images/5-Workshop/5.8-secrets-and-notification/5.8.2-notification/1-create-identity.png?featherlight=false&width=90pc)
  
 **Step 6:** AWS sends a verification email to the address you just entered → open your inbox, click the **Verify** link in that email.
-
-![Verify email](/images/5-Workshop/5.8-secrets-and-notification/5.8.2-notification/3-send-test-email-form.jpg?featherlight=false&width=90pc)
  
 **Step 7:** Go back to the SES Console, refresh — the identity status should switch from **Pending verification** to **Verified**.
  
@@ -48,7 +43,7 @@ pre : " <b> 5.8.2 </b> "
  
 **Step 7:** Click **Send test email**.
 
- ![Fill in the test email form](/images/5-Workshop/5.8-secrets-and-notification/5.8.2-notification/4-Send-test-email.png?featherlight=false&width=90pc)
+![Fill in the test email form](/images/5-Workshop/5.8-secrets-and-notification/5.8.2-notification/4-Send-test-email.png?featherlight=false&width=90pc)
 
 **Step 8:** Check the To-address inbox — the email should have arrived.
 
@@ -70,3 +65,7 @@ How to handle it:
   3. Fill out the form: describe the use case (e.g. "Internal company system for sending automated test result reports"), mail type (Transactional), estimated daily sending volume
   4. Submit — AWS usually responds within 24h. Do this step early, don't wait until right before the demo to request it.
 {{% /notice %}}
+
+---
+
+Next, we will move on to **[5.9. Auth & API Gateway](../../5.9-api-gateway-and-auth/)** to set up Cognito authentication and the API layer.

@@ -1,6 +1,6 @@
----
+﻿---
 title : "Queue & VPC Endpoints"
-date : 2026-06-15
+date : 2026-07-10
 weight : 4
 chapter : false
 pre : " <b> 5.4. </b> "
@@ -8,27 +8,27 @@ pre : " <b> 5.4. </b> "
 
 #### Create an SQS Queue
 
-**Step 1:** Go to the **SQS Console**.
+**Step 1:** Access the **AWS Management Console**, search for **Simple Queue Service**, and select **Simple Queue Service**.
 
 **Step 2:** Click **Create queue**.
 
-![Create Queue](/images/5-Workshop/5.4-Queue-VPC-Endpoints/1-create-queue.png?featherlight=false&width=90pc)
+![Create Queue](/images/5-Workshop/5.4-queue-and-endpoints/1-create-queue.png?featherlight=false&width=90pc)
 
 **Step 3:** Select type **Standard**, name it `playwright-dlq`, leave the other settings unchanged.
 
-![Create the Dead Letter Queue](/images/5-Workshop/5.4-Queue-VPC-Endpoints/2-create-dlq.png?featherlight=false&width=90pc)
+![Create the Dead Letter Queue](/images/5-Workshop/5.4-queue-and-endpoints/2-create-dlq.png?featherlight=false&width=90pc)
 
 **Step 4:** Click **Create queue** to save.
 
 **Step 5:** Click **Create queue** again, name it `playwright-task-queue`.
 
-![Create the playwright task queue](/images/5-Workshop/5.4-Queue-VPC-Endpoints/3-create-ptq.png?featherlight=false&width=90pc)
+![Create the playwright task queue](/images/5-Workshop/5.4-queue-and-endpoints/3-create-ptq.png?featherlight=false&width=90pc)
 
 **Step 6:** Scroll down to the **Dead-letter queue** section, turn on **Enabled**.
 
 **Step 7:** Select queue = `playwright-dlq`, **Maximum receives** = `3`.
 
-![Attach the Dead Letter Queue to the Task Queue](/images/5-Workshop/5.4-Queue-VPC-Endpoints/4-attach-dlq.png?featherlight=false&width=90pc)
+![Attach the Dead Letter Queue to the Task Queue](/images/5-Workshop/5.4-queue-and-endpoints/4-attach-dlq.png?featherlight=false&width=90pc)
 
 **Step 8:** Click **Create queue**.
 
@@ -36,7 +36,7 @@ pre : " <b> 5.4. </b> "
 
 #### Create Endpoint 1: S3 (Gateway type)
 
-**Step 1:** Go to **VPC Console → Endpoints**, click **Create endpoint**.
+**Step 1:** Access the **AWS Management Console**, search for **VPC**, select **VPC**, and then click **Endpoints** in the left navigation pane. Click **Create endpoint**.
 
 **Step 2:** Name tag: enter `playwright-endpoint-s3`.
 
@@ -44,7 +44,7 @@ pre : " <b> 5.4. </b> "
 
 **Step 4:** In the search box under Services, type: `com.amazonaws.ap-southeast-1.s3`.
 
-![Search for the S3 service](/images/5-Workshop/5.4-Queue-VPC-Endpoints/5-s3-search.png?featherlight=false&width=90pc)
+![Search for the S3 service](/images/5-Workshop/5.4-queue-and-endpoints/5-s3-search.png?featherlight=false&width=90pc)
 
 **Step 5:** The results table will show 2 rows with the same service name — tick the one whose **Type = Gateway** (don't select the Interface row below it).
 
@@ -58,7 +58,7 @@ pre : " <b> 5.4. </b> "
 
 **Step 10:** Click the orange **Create endpoint** button in the bottom-right corner.
 
-![S3 endpoint created](/images/5-Workshop/5.4-Queue-VPC-Endpoints/6-s3-created.png?featherlight=false&width=90pc)
+![S3 endpoint created](/images/5-Workshop/5.4-queue-and-endpoints/6-s3-created.png?featherlight=false&width=90pc)
 
 ---
 
@@ -72,7 +72,7 @@ pre : " <b> 5.4. </b> "
 
 **Step 3:** Search for service: `com.amazonaws.ap-southeast-1.ecr.api`.
 
-![Search for the ECR API service](/images/5-Workshop/5.4-Queue-VPC-Endpoints/7-ecr-api-search.png?featherlight=false&width=90pc)
+![Search for the ECR API service](/images/5-Workshop/5.4-queue-and-endpoints/7-ecr-api-search.png?featherlight=false&width=90pc)
 
 **Step 4:** Type: **Interface**.
 
@@ -86,7 +86,7 @@ pre : " <b> 5.4. </b> "
 
 **Step 9:** Click **Create endpoint**.
 
-![ECR API endpoint created](/images/5-Workshop/5.4-Queue-VPC-Endpoints/8-ecr-api-created.png?featherlight=false&width=90pc)
+![ECR API endpoint created](/images/5-Workshop/5.4-queue-and-endpoints/8-ecr-api-created.png?featherlight=false&width=90pc)
 
 ---
 
@@ -100,7 +100,7 @@ pre : " <b> 5.4. </b> "
 
 **Step 3:** Search for service: `com.amazonaws.ap-southeast-1.ecr.dkr`.
 
-![Search for the ECR DKR service](/images/5-Workshop/5.4-Queue-VPC-Endpoints/9-ecr-dkr-search.png?featherlight=false&width=90pc)
+![Search for the ECR DKR service](/images/5-Workshop/5.4-queue-and-endpoints/9-ecr-dkr-search.png?featherlight=false&width=90pc)
 
 **Step 4:** Type: **Interface**.
 
@@ -114,7 +114,7 @@ pre : " <b> 5.4. </b> "
 
 **Step 9:** Click **Create endpoint**.
 
-![ECR DKR endpoint created](/images/5-Workshop/5.4-Queue-VPC-Endpoints/10-ecr-dkr-created.png?featherlight=false&width=90pc)
+![ECR DKR endpoint created](/images/5-Workshop/5.4-queue-and-endpoints/10-ecr-dkr-created.png?featherlight=false&width=90pc)
 
 ---
 
@@ -126,7 +126,7 @@ pre : " <b> 5.4. </b> "
 
 **Step 3:** Search for service: `com.amazonaws.ap-southeast-1.logs`.
 
-![Search for the CloudWatch Logs service](/images/5-Workshop/5.4-Queue-VPC-Endpoints/11-logs-search.png?featherlight=false&width=90pc)
+![Search for the CloudWatch Logs service](/images/5-Workshop/5.4-queue-and-endpoints/11-logs-search.png?featherlight=false&width=90pc)
 
 **Step 4:** Type: **Interface**.
 
@@ -140,7 +140,7 @@ pre : " <b> 5.4. </b> "
 
 **Step 9:** Click **Create endpoint**.
 
-![CloudWatch Logs endpoint created](/images/5-Workshop/5.4-Queue-VPC-Endpoints/12-logs-created.png?featherlight=false&width=90pc)
+![CloudWatch Logs endpoint created](/images/5-Workshop/5.4-queue-and-endpoints/12-logs-created.png?featherlight=false&width=90pc)
 
 ---
 
@@ -152,9 +152,9 @@ pre : " <b> 5.4. </b> "
 
 **Step 3:** Check that **Private DNS names enabled** = **Yes**. If it's No, click **Actions → Modify private DNS name** to enable it.
 
-![Check Private DNS names enabled - api](/images/5-Workshop/5.4-Queue-VPC-Endpoints/13-check-private-dns-api.png?featherlight=false&width=90pc ) 
-![Check Private DNS names enabled - dkr](/images/5-Workshop/5.4-Queue-VPC-Endpoints/14-check-private-dns-dkr.png?featherlight=false&width=90pc)
-![Check Private DNS names enabled - logs](/images/5-Workshop/5.4-Queue-VPC-Endpoints/15-check-private-dns-logs.png?featherlight=false&width=90pc)
+![Check Private DNS names enabled - api](/images/5-Workshop/5.4-queue-and-endpoints/13-check-private-dns-api.png?featherlight=false&width=90pc ) 
+![Check Private DNS names enabled - dkr](/images/5-Workshop/5.4-queue-and-endpoints/14-check-private-dns-dkr.png?featherlight=false&width=90pc)
+![Check Private DNS names enabled - logs](/images/5-Workshop/5.4-queue-and-endpoints/15-check-private-dns-logs.png?featherlight=false&width=90pc)
 
 #### Verification
 
@@ -162,8 +162,12 @@ pre : " <b> 5.4. </b> "
 
 **Step 2:** All of them are in **Available** status.
 
-![Check available status](/images/5-Workshop/5.4-Queue-VPC-Endpoints/16-available-check.png?featherlight=false&width=90pc)
+![Check available status](/images/5-Workshop/5.4-queue-and-endpoints/16-available-check.png?featherlight=false&width=90pc)
 
 **Step 3:** Go to **VPC Console → Route Tables** → select `playwright-private-rtb` (`rtb-08b47df38de10ba54`) → **Routes** tab, confirm there is a new route in prefix list form `pl-xxxxx` pointing to the S3 Endpoint just created.
 
-![Route Table has a route to the S3 Endpoint](/images/5-Workshop/5.4-Queue-VPC-Endpoints/17-route-table-check.png?featherlight=false&width=90pc)
+![Route Table has a route to the S3 Endpoint](/images/5-Workshop/5.4-queue-and-endpoints/17-route-table-check.png?featherlight=false&width=90pc)
+
+---
+
+The Queue and VPC Endpoints setup is complete. Next, we will move on to **[5.5. Docker Image](../5.5-docker-image/)** to build the Playwright container image.

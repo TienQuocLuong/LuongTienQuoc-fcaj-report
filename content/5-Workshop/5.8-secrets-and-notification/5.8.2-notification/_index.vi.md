@@ -1,13 +1,11 @@
 ---
-title : "Bảo mật & Thông báo"
+title : "Thông báo qua SES Email"
 date : 2026-06-19
-weight : 8
+weight : 2
 chapter : false
 pre : " <b> 5.8.2 </b> "
 ---
 
-
- 
 #### Phần 1: Verify email người gửi trên SES
  
 **Bước 1:** Vào **Amazon SES Console** (nhớ đúng region `ap-southeast-1`).
@@ -23,8 +21,6 @@ pre : " <b> 5.8.2 </b> "
 ![Tạo Verified Identity trên SES](/images/5-Workshop/5.8-secrets-and-notification/5.8.2-notification/1-create-identity.png?featherlight=false&width=90pc)
  
 **Bước 6:** AWS sẽ gửi 1 email xác nhận đến địa chỉ vừa nhập → mở hộp thư, bấm link **Verify** trong email đó.
-
-![Verify email](/images/5-Workshop/5.8-secrets-and-notification/5.8.2-notification/3-send-test-email-form.jpg?featherlight=false&width=90pc)
  
 **Bước 7:** Quay lại SES Console, refresh — status của identity phải chuyển từ **Pending verification** sang **Verified**.
  
@@ -48,7 +44,7 @@ pre : " <b> 5.8.2 </b> "
  
 **Bước 7:** Bấm **Send test email**.
  
- ![Điền thông tin test email](/images/5-Workshop/5.8-secrets-and-notification/5.8.2-notification/4-Send-test-email.png?featherlight=false&width=90pc)
+![Điền thông tin test email](/images/5-Workshop/5.8-secrets-and-notification/5.8.2-notification/4-Send-test-email.png?featherlight=false&width=90pc)
 
 **Bước 8:** Kiểm tra hộp thư đến của To-address — phải nhận được email.
 
@@ -70,3 +66,7 @@ Cách xử lý:
   3. Điền form: mô tả use case (VD: "Hệ thống gửi báo cáo kết quả test tự động nội bộ công ty"), loại mail (Transactional), ước lượng volume gửi/ngày
   4. Submit — AWS thường phản hồi trong 24h. Nên làm bước này sớm, đừng để sát ngày demo mới request.
 {{% /notice %}}
+
+---
+
+Tiếp theo, chúng ta sẽ chuyển sang **[5.9. Auth & API Gateway](../../5.9-api-gateway-and-auth/)** để thiết lập xác thực Cognito và lớp API.

@@ -1,4 +1,4 @@
----
+﻿---
 title : "AI API Key"
 date : 2026-06-19
 weight : 1
@@ -38,7 +38,7 @@ Chọn **AWS Secrets Manager**, sau đó nhấn:
 Store a new secret
 ```
 
-![Mở AWS Secrets Manager](/images/5-Workshop/5.8-secrets-and-notification/5.8-secrets-and-notification/5.8.1-secrets-manager/01-store-new-secret.png?featherlight=false&width=90pc)
+![Mở AWS Secrets Manager](/images/5-Workshop/5.8-secrets-and-notification/5.8.1-secrets-manager/01-store-new-secret.png?featherlight=false&width=90pc)
 
 ---
 
@@ -66,7 +66,7 @@ aws/secretsmanager
 
 Sau đó chọn **Next**.
 
-![Chọn loại Secret và nhập API Key](/images/5-Workshop/5.8-secrets-and-notification/5.8-secrets-and-notification/5.8.1-secrets-manager/02-configure-secret-value.png?featherlight=false&width=90pc)
+![Chọn loại Secret và nhập API Key](/images/5-Workshop/5.8-secrets-and-notification/5.8.1-secrets-manager/02-configure-secret-value.png?featherlight=false&width=90pc)
 
 {{% notice warning %}}
 Không đưa AI API Key thật lên GitHub hoặc trong báo cáo. Hãy làm mờ (blur) hoặc che phần Value trước khi chụp ảnh.
@@ -85,7 +85,7 @@ Nhập các thông tin sau:
 
 Sau đó chọn **Next**.
 
-![Đặt tên Secret](/images/5-Workshop/5.8-secrets-and-notification/5.8-secrets-and-notification/5.8.1-secrets-manager/03-configure-secret-name.png?featherlight=false&width=90pc)
+![Đặt tên Secret](/images/5-Workshop/5.8-secrets-and-notification/5.8.1-secrets-manager/03-configure-secret-name.png?featherlight=false&width=90pc)
 
 ---
 
@@ -137,7 +137,7 @@ Màn hình sẽ hiển thị các thông tin:
 - Secret ARN
 - Encryption key
 
-![Secret đã được tạo](/images/5-Workshop/5.8-secrets-and-notification/5.8-secrets-and-notification/5.8.1-secrets-manager/04-secret-created.png?featherlight=false&width=90pc)
+![Secret đã được tạo](/images/5-Workshop/5.8-secrets-and-notification/5.8.1-secrets-manager/04-secret-created.png?featherlight=false&width=90pc)
 
 {{% notice note %}}
 Không nhấn **Retrieve secret value** khi chụp ảnh vì API Key sẽ được hiển thị.
@@ -240,3 +240,6 @@ Sau khi hoàn thành phần này:
 - Lambda không cần lưu API Key trong mã nguồn.
 - API Key chỉ được truy xuất khi Lambda thực thi.
 - Dễ dàng thay đổi hoặc cập nhật API Key mà không cần chỉnh sửa mã nguồn.
+---
+
+Tiếp theo, chúng ta sẽ chuyển sang **[5.8.2. Thông báo qua SES Email](../5.8.2-notification/)** để cấu hình kênh gửi email thông báo.
