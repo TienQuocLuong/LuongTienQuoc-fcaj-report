@@ -1,6 +1,6 @@
 ---
 title : "Hàm Lambda"
-date : 2026-07-10
+date : 2026-06-18
 weight : 7
 chapter : false
 pre : " <b> 5.7. </b> "
@@ -31,17 +31,17 @@ Hàm này là điểm tích hợp cho API Gateway của bạn.
 **Bước 4:** Đặt **Function name** là `playwright-api-backend`.
 
 **Bước 5:** Chọn **Runtime** là `Python 3.14` (hoặc phiên bản Python mới nhất có sẵn).
-![Tạo API Backend](/images/5-Workshop/5.7-lambda-functions/create-function-api-backend.png)
+![Tạo API Backend](/images/5-Workshop/5.7-lambda-functions/1-create-function-api-backend.png)
 
 **Bước 6:** Dưới mục **Permissions**, mở rộng phần **Change default execution role**.
 
 **Bước 7:** Chọn **Use an existing role** và chọn `playwright-lambda-role` đã được tạo trong phần chuẩn bị.
-![Execution Role](/images/5-Workshop/5.7-lambda-functions/create-function-role.png)
+![Execution Role](/images/5-Workshop/5.7-lambda-functions/2-create-function-role.png)
 
 **Bước 8:** Nhấn **Create function**.
 
 **Bước 9:** Cuộn xuống phần **Code source**, nhấn **Upload from** và chọn **.zip file**. Tải lên tệp `playwright-api-backend.zip` mà bạn đã chuẩn bị ở phần Chuẩn bị và nhấn **Save**.
-![Tải lên ZIP](/images/5-Workshop/5.7-lambda-functions/upload-zip.png)
+![Tải lên ZIP](/images/5-Workshop/5.7-lambda-functions/3-upload-zip.png)
 
 **Bước 10:** Chuyển sang thẻ **Configuration**, chọn **Environment variables**. Nhấn **Edit**.
 
@@ -53,7 +53,7 @@ Hàm này là điểm tích hợp cho API Gateway của bạn.
    - `TASK_QUEUE_URL`: URL của `playwright-task-queue`
    - `TEST_HISTORY_TABLE`: `playwright-test-history`
    - `TEST_SUITES_TABLE`: `playwright-test-suites`
-![Biến môi trường API Backend](/images/5-Workshop/5.7-lambda-functions/env-vars-api-backend.png)
+![Biến môi trường API Backend](/images/5-Workshop/5.7-lambda-functions/4-env-vars-api-backend.png)
 
 ---
 
@@ -72,11 +72,12 @@ Hàm này lắng nghe hàng đợi và khởi chạy các tác vụ ECS Fargate.
 **Bước 5:** Chọn hàng đợi `playwright-task-queue` bạn đã tạo.
 
 **Bước 6:** Đặt **Batch size** là `1`. Điều này đảm bảo mỗi tác vụ ECS được khởi chạy độc lập cho từng yêu cầu. Nhấn **Add**.
-![Trigger SQS cho Coordinator](/images/5-Workshop/5.7-lambda-functions/sqs-trigger-coordinator.png)
+![Trigger SQS cho Coordinator](/images/5-Workshop/5.7-lambda-functions/5-sqs-trigger-coordinator.png)
 
 **Bước 7:** Chuyển sang thẻ **Configuration**, chọn **General configuration** và nhấn **Edit**.
 
 **Bước 8:** Điều chỉnh **Timeout** lên `30` giây và **Ephemeral storage** là `512` MB. Nhấn **Save**.
+![Điều chỉnh Timeout và Ephemeral storage](/images/5-Workshop/5.7-lambda-functions/6-timeout-coordinator.png)
 
 **Bước 9:** Chuyển sang phần **Environment variables** và thêm các khóa sau với giá trị tương ứng (Subnet, Security Group, tên Cluster...):
    - `ASSIGN_PUBLIC_IP`: `DISABLED`
@@ -86,7 +87,7 @@ Hàm này lắng nghe hàng đợi và khởi chạy các tác vụ ECS Fargate.
    - `SECURITY_GROUP_IDS`: ID của ECS Security Group (VD: `sg-...`)
    - `SUBNET_IDS`: ID của Private Subnet (VD: `subnet-...`)
    - `TEST_HISTORY_TABLE`: `playwright-test-history`
-![Biến môi trường Coordinator](/images/5-Workshop/5.7-lambda-functions/env-vars-coordinator.png)
+![Biến môi trường Coordinator](/images/5-Workshop/5.7-lambda-functions/7-env-vars-coordinator.png)
 
 ---
 
@@ -103,12 +104,12 @@ Hàm này xử lý các thông điệp bị lỗi trong quá trình điều ph�
 **Bước 4:** Chọn **SQS** và trỏ đến `playwright-dlq` (Dead Letter Queue).
 
 **Bước 5:** Đặt **Batch size** là `3`. Nhấn **Add**.
-![Trigger SQS cho Error Handler](/images/5-Workshop/5.7-lambda-functions/sqs-trigger-error-handler.png)
+![Trigger SQS cho Error Handler](/images/5-Workshop/5.7-lambda-functions/8-sqs-trigger-error-handler.png)
 
 **Bước 6:** Chuyển sang phần **Environment variables** và thêm các biến sau:
    - `ERROR_DYNAMODB_TABLE`: `playwright-error-log`
    - `TEST_HISTORY_TABLE`: `playwright-test-history`
-![Biến môi trường Error Handler](/images/5-Workshop/5.7-lambda-functions/env-vars-error-handler.png)
+![Biến môi trường Error Handler](/images/5-Workshop/5.7-lambda-functions/9-env-vars-error-handler.png)
 
 ---
 
@@ -121,6 +122,7 @@ Hàm này được kích hoạt bởi EventBridge sau khi tác vụ ECS hoàn t�
 **Bước 2:** Chọn **Runtime** là `Python 3.14`.
 
 **Bước 3:** Dưới mục **Additional settings**, bật **Custom execution role** và chọn `playwright-postprocessing-role`.
+![Chọn Custom execution role playwright-postprocessing-role](/images/5-Workshop/5.7-lambda-functions/10-execution-role-selection.png)
 
 **Bước 4:** Cuộn xuống phần **Code source**, nhấn **Upload from** và chọn **.zip file**. Tải lên tệp `playwright-postprocessing.zip` đã chuẩn bị ở phần Chuẩn bị và nhấn **Save**.
 
@@ -130,7 +132,7 @@ Hàm này được kích hoạt bởi EventBridge sau khi tác vụ ECS hoàn t�
    - **VPC**: Chọn `playwright-vpc` của bạn
    - **Subnets**: Chọn `playwright-private-subnet`
    - **Security groups**: Chọn `playwright-sg-lambda`
-![Cấu hình VPC cho Postprocessing](/images/5-Workshop/5.7-lambda-functions/postprocessing-vpc.png)
+![Cấu hình VPC cho Postprocessing](/images/5-Workshop/5.7-lambda-functions/11-postprocessing-vpc.png)
 
 **Bước 7:** Chọn **Environment variables** và nhấn **Edit**. Thêm các biến sau:
    - `EMAIL_CONFIG_TABLE`: `playwright-email-config`
@@ -139,7 +141,7 @@ Hàm này được kích hoạt bởi EventBridge sau khi tác vụ ECS hoàn t�
    - `REPORT_BUCKET`: `playwright-report-2026`
    - `SES_SENDER_EMAIL`: Địa chỉ email SES đã xác minh của bạn
    - `TEST_HISTORY_TABLE`: `playwright-test-history`
-![Biến môi trường Postprocessing](/images/5-Workshop/5.7-lambda-functions/postprocessing-env-vars.png)
+![Biến môi trường Postprocessing](/images/5-Workshop/5.7-lambda-functions/12-postprocessing-env-vars.png)
 
 
 > [!NOTE]

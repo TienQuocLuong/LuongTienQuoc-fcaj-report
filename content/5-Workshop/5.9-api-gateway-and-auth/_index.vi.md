@@ -20,7 +20,7 @@ Thiết lập đăng nhập, phân quyền người dùng và cổng API cho Fro
 **Bước 2:** Bấm nút cam **Create user pool**.
 
 **Bước 3:** Ở trang **Configure sign-in experience**: mục Provider types giữ **Cognito user pool**; mục Sign-in options tick **Email**. Bấm **Next**.
-![Cấu hình sign-in experience với Email](/images/5-Workshop/5.9-api-gateway-and-auth/1.3-cognito-configure-signin.png?featherlight=false&width=90pc)
+![Cấu hình sign-in experience với Email](/images/5-Workshop/5.9-api-gateway-and-auth/1-cognito-configure-signin.png?featherlight=false&width=90pc)
 **Bước 4:** Ở trang **Configure security requirements**: mục Password policy chọn **Cognito defaults**; mục Multi-factor authentication chọn **No MFA**. Bấm **Next**.
 
 **Bước 5:** Ở trang **Configure sign-up experience**: mục Required attributes for sign-up, tick **email**. Các mục còn lại giữ mặc định. Bấm **Next**.
@@ -38,7 +38,7 @@ Thiết lập đăng nhập, phân quyền người dùng và cổng API cho Fro
 
 **Bước 10:** Bấm **Next**, xem lại toàn bộ cấu hình ở trang **Review and create**, bấm **Create user pool**.
 
-![User Pool playwright-user-pool đã được tạo](/images/5-Workshop/5.9-api-gateway-and-auth/1-user-pool-created.png?featherlight=false&width=90pc)
+![User Pool playwright-user-pool đã được tạo](/images/5-Workshop/5.9-api-gateway-and-auth/2-user-pool-created.png?featherlight=false&width=90pc)
 
 ---
 
@@ -51,13 +51,13 @@ Thiết lập đăng nhập, phân quyền người dùng và cổng API cho Fro
 **Bước 3:** Bấm nút **Create group**.
 
 **Bước 4:** Điền Group name = `Admin`, các mục khác để trống, bấm **Create group**.
-![Group Admin đã được tạo](/images/5-Workshop/5.9-api-gateway-and-auth/2.4-group-admin-created.png?featherlight=false&width=90pc)
+![Group Admin đã được tạo](/images/5-Workshop/5.9-api-gateway-and-auth/3-group-admin-created.png?featherlight=false&width=90pc)
 
 **Bước 5:** Bấm **Create group** lần nữa, điền Group name = `Developer`, bấm **Create group**.
 
 **Bước 6:** Bấm **Create group** lần nữa, điền Group name = `QA`, bấm **Create group**.
 
-![3 Group Admin, Developer, QA đã được tạo](/images/5-Workshop/5.9-api-gateway-and-auth/2-groups-created.png?featherlight=false&width=90pc)
+![3 Group Admin, Developer, QA đã được tạo](/images/5-Workshop/5.9-api-gateway-and-auth/4-groups-created.png?featherlight=false&width=90pc)
 
 **Bước 7:** Vẫn ở menu bên trái, mở mục **Applications** → bấm **App clients**.
 
@@ -74,14 +74,14 @@ Thiết lập đăng nhập, phân quyền người dùng và cổng API cho Fro
 **Bước 3:** Ở mục Invitation message: chọn **Don't send an invitation**.
 
 **Bước 4:** Điền Email address = `Admin-test@gmail.com`, tick **Mark email address as verified** nếu muốn bỏ qua bước xác thực email (không bắt buộc cho tài khoản test nội bộ).
-![Điền thông tin tạo user Admin-test](/images/5-Workshop/5.9-api-gateway-and-auth/3.4-create-user-admin-test.png?featherlight=false&width=90pc)
+![Điền thông tin tạo user Admin-test](/images/5-Workshop/5.9-api-gateway-and-auth/5-create-user-admin-test.png?featherlight=false&width=90pc)
 **Bước 5:** Đặt Temporary password (hoặc để Cognito tự sinh), bấm **Create user**.
 
 **Bước 6:** Lặp lại Bước 2-5 để tạo user `Dev-test@gmail.com`.
 
 **Bước 7:** Lặp lại Bước 2-5 để tạo user `Qa-test@gmail.com`.
 
-![3 tài khoản test đã được tạo, trạng thái Enabled](/images/5-Workshop/5.9-api-gateway-and-auth/3-test-users-created.png?featherlight=false&width=90pc)
+![3 tài khoản test đã được tạo, trạng thái Enabled](/images/5-Workshop/5.9-api-gateway-and-auth/6-test-users-created.png?featherlight=false&width=90pc)
 
 ---
 
@@ -93,19 +93,19 @@ Thiết lập đăng nhập, phân quyền người dùng và cổng API cho Fro
 
 **Bước 3:** Tick chọn Group **Admin**, bấm **Add**.
 
-![User Admin-test đã được gán vào Group Admin](/images/5-Workshop/5.9-api-gateway-and-auth/4-user-admin-added.png?featherlight=false&width=90pc)
+![User Admin-test đã được gán vào Group Admin](/images/5-Workshop/5.9-api-gateway-and-auth/7-user-admin-added.png?featherlight=false&width=90pc)
 
 **Bước 4:** Quay lại danh sách **Users**, bấm vào user `Dev-test@gmail.com`.
 
 **Bước 5:** Kéo xuống mục **Group memberships**, bấm **Add user to group**, tick chọn Group **Developer**, bấm **Add**.
 
-![User Dev-test đã được gán vào Group Developer](/images/5-Workshop/5.9-api-gateway-and-auth/5-user-developer-added.png?featherlight=false&width=90pc)
+![User Dev-test đã được gán vào Group Developer](/images/5-Workshop/5.9-api-gateway-and-auth/8-user-developer-added.png?featherlight=false&width=90pc)
 
 **Bước 6:** Quay lại danh sách **Users**, bấm vào user `Qa-test@gmail.com`.
 
 **Bước 7:** Kéo xuống mục **Group memberships**, bấm **Add user to group**, tick chọn Group **QA**, bấm **Add**.
 
-![User Qa-test đã được gán vào Group QA](/images/5-Workshop/5.9-api-gateway-and-auth/6-user-qa-added.png?featherlight=false&width=90pc)
+![User Qa-test đã được gán vào Group QA](/images/5-Workshop/5.9-api-gateway-and-auth/9-user-qa-added.png?featherlight=false&width=90pc)
 
 ---
 
@@ -116,22 +116,22 @@ Thiết lập đăng nhập, phân quyền người dùng và cổng API cho Fro
 **Bước 2:** Menu bên trái bấm **APIs** → bấm nút cam **Create API**.
  
 **Bước 3:** Ở mục **HTTP API**, bấm **Build** (không chọn REST API — HTTP API đơn giản hơn và đủ dùng cho workshop này).
-![Chọn HTTP API để Build](/images/5-Workshop/5.9-api-gateway-and-auth/5.3-api-gateway-http-build.png?featherlight=false&width=90pc)
+![Chọn HTTP API để Build](/images/5-Workshop/5.9-api-gateway-and-auth/10-api-gateway-http-build.png?featherlight=false&width=90pc)
 **Bước 4:** Ở trang **Create and configure integrations**: bấm **Add integration** → chọn **Lambda**.
  
 **Bước 5:** Ở dropdown Lambda function, chọn `playwright-api-backend`. Đặt **API name** = `playwright-api`. Bấm **Next**.
-![Chọn Lambda integration và đặt tên API](/images/5-Workshop/5.9-api-gateway-and-auth/5.5-api-integration-lambda.png?featherlight=false&width=90pc)
+![Chọn Lambda integration và đặt tên API](/images/5-Workshop/5.9-api-gateway-and-auth/11-api-integration-lambda.png?featherlight=false&width=90pc)
 **Bước 6:** Ở trang **Configure routes** (optional): Method chọn **POST**, Resource path điền `/trigger`, Integration target giữ nguyên `playwright-api-backend (Lambda)`. Bấm **Next**.
  
 **Bước 7:** Ở trang **Define stages** (optional): giữ mặc định Stage name = `$default`, Auto-deploy = **enabled**. Bấm **Next**.
-![Cấu hình stage $default với Auto-deploy](/images/5-Workshop/5.9-api-gateway-and-auth/5.7-api-stages-default.png?featherlight=false&width=90pc)
+![Cấu hình stage $default với Auto-deploy](/images/5-Workshop/5.9-api-gateway-and-auth/12-api-stages-default.png?featherlight=false&width=90pc)
 **Bước 8:** Ở trang **Review and create**, kiểm tra lại đúng 3 mục: **API name and integrations** (playwright-api, playwright-api-backend), **Routes** (POST /trigger → playwright-api-backend), **Stages** ($default, Auto-deploy: enabled). Bấm **Create**.
  
-![Review and create trước khi tạo API](/images/5-Workshop/5.9-api-gateway-and-auth/7a-review-create-api.png?featherlight=false&width=90pc)
+![Review and create trước khi tạo API](/images/5-Workshop/5.9-api-gateway-and-auth/13-review-create-api.png?featherlight=false&width=90pc)
  
 **Bước 9:** Xác nhận thông báo **"Successfully created API playwright-api (8bsb7jbhu7)"** — ID API tự sinh sẽ khác của bạn.
  
-![API playwright-api đã được tạo thành công](/images/5-Workshop/5.9-api-gateway-and-auth/7b-api-created.png?featherlight=false&width=90pc)
+![API playwright-api đã được tạo thành công](/images/5-Workshop/5.9-api-gateway-and-auth/14-api-created.png?featherlight=false&width=90pc)
  
 ---
  
@@ -153,7 +153,7 @@ Thiết lập đăng nhập, phân quyền người dùng và cổng API cho Fro
  
 **Bước 8:** Bấm **Create**, xác nhận thông báo **"Successfully created authorizer 'cognito-authorizer'"**.
  
-![Authorizer cognito-authorizer đã được tạo](/images/5-Workshop/5.9-api-gateway-and-auth/8a-authorizer-created.png?featherlight=false&width=90pc)
+![Authorizer cognito-authorizer đã được tạo](/images/5-Workshop/5.9-api-gateway-and-auth/15-authorizer-created.png?featherlight=false&width=90pc)
  
 **Bước 9:** Chuyển sang tab **Attach authorizers to routes**.
  
@@ -161,7 +161,7 @@ Thiết lập đăng nhập, phân quyền người dùng và cổng API cho Fro
  
 **Bước 11:** Ở khung bên phải **Authorizer for route POST /trigger**, chọn `cognito-authorizer`, xác nhận route hiển thị badge **JWT Auth** màu xanh.
  
-![Route POST /trigger đã gắn JWT Auth](/images/5-Workshop/5.9-api-gateway-and-auth/8b-route-jwt-attached.png?featherlight=false&width=90pc)
+![Route POST /trigger đã gắn JWT Auth](/images/5-Workshop/5.9-api-gateway-and-auth/16-route-jwt-attached.png?featherlight=false&width=90pc)
  
 *(Ghi chú: Khung bên phải sẽ hiển thị lại đầy đủ Identity source, Issuer, Audience vừa cấu hình — dùng để kiểm tra nhanh nếu sau này gặp lỗi 401.)*
  
@@ -175,7 +175,7 @@ Thiết lập đăng nhập, phân quyền người dùng và cổng API cho Fro
  
 **Bước 3:** Ở khung **Stage details**, copy **Invoke URL**, ví dụ dạng `https://8bsb7jbhu7.execute-api.ap-southeast-1.amazonaws.com` — dùng cho mục 5.10 (Frontend).
  
-![Stage $default với Invoke URL](/images/5-Workshop/5.9-api-gateway-and-auth/9-stage-invoke-url.png?featherlight=false&width=90pc)
+![Stage $default với Invoke URL](/images/5-Workshop/5.9-api-gateway-and-auth/17-stage-invoke-url.png?featherlight=false&width=90pc)
  
 ---
  

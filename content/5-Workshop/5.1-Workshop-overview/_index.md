@@ -1,6 +1,6 @@
 ---
 title : "Introduction"
-date : 2026-07-10
+date : 2026-06-12
 weight : 1 
 chapter : false
 pre : " <b> 5.1. </b> "
@@ -22,7 +22,7 @@ In this workshop, you will build and deploy a Cloud-Native End-to-End (E2E) auto
 
 - **"AI Support & Notification"** uses AWS Lambda to process and clean log data before forwarding it to Google Gemini (External AI API) for analysis, result summarization, and root-cause suggestions. Once complete, the system automatically sends email reports via Amazon SES with S3 report download links — and ensures delivery even when the AI service is temporarily unavailable.
 
-![Architecture](/images/5-Workshop/5.1-Workshop-overview/Architecture.png?featherlight=false&width=90pc)
+![Architecture](/images/5-Workshop/5.1-Workshop-overview/1-Architecture.png?featherlight=false&width=90pc)
 
 ---
 
