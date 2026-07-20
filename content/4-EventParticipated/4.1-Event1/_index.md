@@ -67,3 +67,5 @@ Furthermore, the learning strategies introduced during the workshop will help me
 This was my first time attending an AWS First Cloud Journey community event, so I felt a little nervous at the beginning. However, the speakers presented the topics in a clear and engaging way, supported by practical demonstrations that made complex concepts much easier to understand.
 
 Besides gaining new knowledge about AI, AWS Cloud, and modern software development practices, I also had the opportunity to meet people who share similar interests in technology. Overall, the workshop was a valuable experience that motivated me to continue learning and participate in future FCAJ events.
+
+![Proof photo](/images/4-Event/1-event1.jpg)

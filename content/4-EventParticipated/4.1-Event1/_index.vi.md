@@ -67,3 +67,5 @@ Ngoài ra, các phương pháp xây dựng thói quen học tập được chia 
 Đây là lần đầu tiên em tham gia một sự kiện của cộng đồng AWS First Cloud Journey nên ban đầu em có phần khá hồi hộp. Tuy nhiên, không khí của workshop rất thân thiện và các diễn giả đều trình bày dễ hiểu, kết hợp với nhiều ví dụ thực tế nên em có thể tiếp thu kiến thức một cách thuận lợi.
 
 Bên cạnh việc học hỏi thêm về AI, AWS Cloud và các phương pháp phát triển phần mềm hiện đại, em còn có cơ hội gặp gỡ nhiều anh chị và các bạn có cùng định hướng trong lĩnh vực công nghệ. Đây là một trải nghiệm rất bổ ích và tạo thêm động lực để em tiếp tục học tập cũng như tham gia các workshop trong tương lai.
+
+![Ảnh minh chứng](/images/4-Event/1-event1.jpg)

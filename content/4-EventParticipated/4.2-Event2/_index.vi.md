@@ -129,3 +129,5 @@ Em có thể vận dụng kinh nghiệm về quản lý thời gian và làm vi�
 Đây là lần thứ hai em tham gia **AWS First Cloud AI Journey Community Day**, tuy nhiên em vẫn cảm thấy khá hồi hộp khi bước vào sự kiện. Không khí của workshop rất sôi nổi, các diễn giả chia sẻ nhiều kinh nghiệm thực tế kết hợp với các ví dụ minh họa nên giúp em dễ dàng tiếp cận những kiến thức mới về AI và điện toán đám mây.
 
 Mặc dù em vẫn chưa đủ tự tin để đặt câu hỏi trực tiếp với các diễn giả, nhưng em đã học hỏi được rất nhiều kiến thức bổ ích và có cơ hội giao lưu với các anh chị cũng như các bạn có cùng đam mê công nghệ. Buổi workshop mang lại cho em thêm động lực để tiếp tục học tập, rèn luyện kỹ năng và tham gia nhiều sự kiện công nghệ trong thời gian tới.
+
+![Ảnh minh chứng](/images/4-Event/2-event2.jpg)

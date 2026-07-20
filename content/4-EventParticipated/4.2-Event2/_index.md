@@ -129,3 +129,5 @@ Although topics such as Context Engineering, Multi-Agent architectures, and LLM 
 This was my second time attending an **AWS First Cloud AI Journey Community Day**, but I still felt excited and slightly nervous before the event began. The workshop atmosphere was energetic, and the speakers delivered practical presentations supported by real-world examples, making complex topics much easier to understand.
 
 Although I was still a little shy about asking questions during the sessions, I learned many valuable insights and had the opportunity to interact with professionals and fellow participants who share the same interest in AI and cloud computing. Overall, the event motivated me to continue improving my technical skills and encouraged me to participate in more technology community events in the future.
+
+![Proof photo](/images/4-Event/2-event2.jpg)
