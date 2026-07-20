@@ -13,7 +13,7 @@ chapter: false
 {{% /notice %}}
 
 ### Student Information:
-emsp; **Full Name:** Luong Tien Quoc
+&emsp; **Full Name:** Luong Tien Quoc
 
 &emsp; **Phone Number:** 0389780003
 
