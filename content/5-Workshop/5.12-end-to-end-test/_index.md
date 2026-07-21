@@ -8,13 +8,13 @@ pre: " <b> 5.12. </b> "
 
 Now that the entire backend and frontend infrastructure is deployed, we will run an end-to-end test of the entire system flow via the WebUI.
 
-#### 1. Access the WebUI Dashboard
+### 1. Access the WebUI Dashboard
 
 Open your browser and navigate to your WebUI URL (from CloudFront or S3 static website). You will see the Admin Dashboard with an overview of total test runs, Pass/Fail rates, and weekly trends.
 
 ![Dashboard](/images/5-Workshop/5.12-end-to-end-test/1-dashboard.jpg)
 
-#### 2. Manage Test Suites
+### 2. Manage Test Suites
 
 The next step is to upload your Playwright test script.
 - In the left menu, select **Test Suites**.
@@ -30,7 +30,7 @@ The next step is to upload your Playwright test script.
 
 ![Add Test Suite](/images/5-Workshop/5.12-end-to-end-test/3-add-test-suite.jpg)
 
-#### 3. Manual Test Trigger
+### 3. Manual Test Trigger
 
 Now we will manually trigger a test execution.
 - In the left menu, select **Manual Trigger**.
@@ -53,7 +53,7 @@ Once the message is successfully sent, the screen will display **"Request queued
 
 ![Request Queued](/images/5-Workshop/5.12-end-to-end-test/7-queued.jpg)
 
-#### 4. View Test History and Details
+### 4. View Test History and Details
 
 To monitor the results of the executions:
 - Go to the **History** menu. Here you will see a list of test runs along with their status (`Pass` or `Fail`), duration, and trigger source. All this data is persistently stored in DynamoDB.
@@ -64,7 +64,7 @@ To monitor the results of the executions:
 
 ![Test Detail](/images/5-Workshop/5.12-end-to-end-test/9-history-detail.jpg)
 
-#### 5. Receive Results and Email Reports
+### 5. Receive Results and Email Reports
 
 After the test finishes, the Post-processing Lambda function will automatically fetch the results, generate an AI summary, and send an email via Amazon SES.
 
@@ -76,7 +76,7 @@ After the test finishes, the Post-processing Lambda function will automatically 
 
 ![HTML Report](/images/5-Workshop/5.12-end-to-end-test/11-html-report.jpg)
 
-#### 6. Additional Configurations
+### 6. Additional Configurations
 
 - **Test Schedule:** You can also set up automated cron schedules for periodic test scripts using Amazon EventBridge in the **Test Schedule** menu.
   ![Test Schedule](/images/5-Workshop/5.12-end-to-end-test/12-schedule.jpg)
