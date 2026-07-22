@@ -5,7 +5,6 @@ weight : 2
 chapter : false
 pre : " <b> 5.8.2 </b> "
 ---
-
 #### Phần 1: Verify email người gửi trên SES
 
 **Bước 1:** Vào **Amazon SES Console** (nhớ đúng region `ap-southeast-1`).

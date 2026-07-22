@@ -1,4 +1,4 @@
-﻿---
+---
 title : "AI API Key"
 date : 2026-06-19
 weight : 1
@@ -104,6 +104,8 @@ Sau đó chọn **Next**.
 ---
 
 **Bước 5:** Kiểm tra và lưu Secret
+
+Xem lại cấu hình.
 
 Kiểm tra lại các thông tin:
 
