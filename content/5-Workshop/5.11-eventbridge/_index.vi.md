@@ -1,6 +1,6 @@
 ---
 title : "EventBridge"
-date : 2026-06-22
+date : 2026-07-10
 weight : 11
 chapter : false
 pre : " <b> 5.11. </b> "
@@ -100,6 +100,7 @@ Ngoài lịch chạy định kỳ ở Phần 1-3 (thuộc mục **Scheduler**), 
 ![Đặt tên rule ở tab Configure](/images/5-Workshop/5.11-eventbridge/11-configure-name.png?featherlight=false&width=90pc)
 
 **Bước 4:** Quay lại tab **Build**. Cuộn xuống phần **Triggering events** bên dưới canvas, khung **Event pattern (filter)** bên phải đã sẵn sàng để nhập sẵn (đang trống, dòng 1, có thể thấy lỗi tạm thời **"JSON is invalid: Unexpected end of JSON input"** — bình thường vì chưa nhập gì). Bấm vào khung này và dán JSON pattern sau vào:
+
 ```json
 {
   "source": ["aws.ecs"],
@@ -110,6 +111,7 @@ Ngoài lịch chạy định kỳ ở Phần 1-3 (thuộc mục **Scheduler**), 
   }
 }
 ```
+
 Thay `<account-id>` bằng Account ID thật của bạn.
 
 ![Dán event pattern JSON vào khung Event pattern (filter)](/images/5-Workshop/5.11-eventbridge/12-paste-json-pattern.png?featherlight=false&width=90pc)

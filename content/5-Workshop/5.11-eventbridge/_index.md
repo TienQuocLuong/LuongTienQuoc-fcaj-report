@@ -1,6 +1,6 @@
 ---
 title : "EventBridge"
-date : 2026-06-22
+date : 2026-07-10
 weight : 11
 chapter : false
 pre : " <b> 5.11. </b> "
@@ -100,6 +100,7 @@ Besides the recurring schedule from Parts 1-3 (under **Scheduler**), the system 
 ![Name the rule on the Configure tab](/images/5-Workshop/5.11-eventbridge/11-configure-name.png?featherlight=false&width=90pc)
 
 **Step 4:** Go back to the **Build** tab. Scroll down to **Triggering events** below the canvas; the **Event pattern (filter)** panel on the right is ready for input (empty, line 1, may briefly show **"JSON is invalid: Unexpected end of JSON input"** — normal since nothing has been entered yet). Click into this panel and paste the following JSON pattern:
+
 ```json
 {
   "source": ["aws.ecs"],
@@ -110,6 +111,7 @@ Besides the recurring schedule from Parts 1-3 (under **Scheduler**), the system 
   }
 }
 ```
+
 Replace `<account-id>` with your real Account ID.
 
 ![Paste the event pattern JSON into the Event pattern (filter) panel](/images/5-Workshop/5.11-eventbridge/12-paste-json-pattern.png?featherlight=false&width=90pc)

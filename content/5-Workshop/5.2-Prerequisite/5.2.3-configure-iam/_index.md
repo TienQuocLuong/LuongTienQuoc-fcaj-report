@@ -11,7 +11,7 @@ pre : " <b> 5.2.3. </b> "
 In this section, you will create four IAM roles for the Playwright testing system:
 
 | IAM role | Trusted service | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | `playwright-lambda-role` | AWS Lambda | Allows Lambda to orchestrate ECS and process results |
 | `playwright-postprocessing-role` | AWS Lambda | Dedicated role for the `playwright-postprocessing` Lambda, separated to more tightly control access to Secrets Manager and SES |
 | `playwright-ecs-execution-role` | ECS Tasks | Allows ECS to pull images from ECR and write logs |
@@ -69,7 +69,7 @@ Besides the shared `playwright-lambda-role` from Step 1, the `playwright-postpro
 Create another new role, select:
 
 | Property | Value |
-|---|---|
+| --- | --- |
 | Trusted entity type | `AWS service` |
 | Service or use case | `Lambda` |
 
@@ -96,7 +96,7 @@ Verify that the trust policy contains the `lambda.amazonaws.com` service princip
 Create another role and select:
 
 | Property | Value |
-|---|---|
+| --- | --- |
 | Trusted entity type | `AWS service` |
 | Service or use case | `Elastic Container Service` |
 | Use case | `Elastic Container Service Task` |
@@ -173,7 +173,7 @@ playwright-ecs-task-role
 When creating the ECS task definition later, configure:
 
 | Field | IAM role |
-|---|---|
+| --- | --- |
 | Task execution role | `playwright-ecs-execution-role` |
 | Task role | `playwright-ecs-task-role` |
 

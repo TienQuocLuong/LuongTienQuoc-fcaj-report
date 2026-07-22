@@ -11,7 +11,7 @@ pre : " <b> 5.2.4. </b> "
 Trong phần này, chúng ta sẽ tạo hai bucket S3 tại Region **Asia Pacific (Singapore) (`ap-southeast-1`)**:
 
 | Bucket | Mục đích |
-|---|---|
+| --- | --- |
 | `playwright-webui-12` | Lưu các tệp frontend của Dashboard Console |
 | `playwright-report-2026` | Lưu báo cáo, ảnh chụp và dữ liệu kết quả kiểm thử |
 
@@ -28,7 +28,7 @@ Tên bucket S3 phải là duy nhất. Nếu các tên trong hướng dẫn đã 
 Cấu hình:
 
 | Thuộc tính | Giá trị |
-|---|---|
+| --- | --- |
 | AWS Region | `ap-southeast-1` |
 | Bucket type | `General purpose` |
 | Bucket namespace | `Global namespace` |
@@ -37,7 +37,7 @@ Cấu hình:
 
 Giữ các thiết lập còn lại theo mặc định và chọn **Create bucket**.
 
-![Tạo bucket Web UI](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/1-create-webui-bucket.png?featherlight=false&width=90pc)
+![Tạo bucket Web UI](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/create-webui-bucket.png?featherlight=false&width=90pc)
 
 ---
 
@@ -54,7 +54,7 @@ icons.svg
 index.html
 ```
 
-![Các tệp trong bucket Web UI](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/2-webui-bucket-objects.png?featherlight=false&width=90pc)
+![Các tệp trong bucket Web UI](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/webui-bucket-objects.png?featherlight=false&width=90pc)
 
 ---
 
@@ -71,14 +71,14 @@ Properties
 Chọn:
 
 | Thuộc tính | Giá trị |
-|---|---|
+| --- | --- |
 | Static website hosting | `Enable` |
 | Hosting type | `Host a static website` |
 | Index document | `index.html` |
 
 Nếu frontend là ứng dụng SPA, có thể đặt **Error document** thành `index.html`. Sau đó chọn **Save changes**.
 
-![Bật static website hosting](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/3-edit-static.png?featherlight=false&width=90pc)
+![Bật static website hosting](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/edit-static.png?featherlight=false&width=90pc)
 
 {{% notice warning %}}
 Không public bucket báo cáo. Với môi trường production, nên giữ bucket Web UI ở chế độ private và cho CloudFront truy cập bằng Origin Access Control (OAC). Khi dùng OAC, hãy dùng S3 bucket origin thay vì S3 website endpoint.
@@ -91,7 +91,7 @@ Không public bucket báo cáo. Với môi trường production, nên giữ buck
 Quay lại danh sách S3 bucket, chọn **Create bucket** và cấu hình:
 
 | Thuộc tính | Giá trị |
-|---|---|
+| --- | --- |
 | AWS Region | `ap-southeast-1` |
 | Bucket type | `General purpose` |
 | Bucket namespace | `Global namespace` |
@@ -100,7 +100,7 @@ Quay lại danh sách S3 bucket, chọn **Create bucket** và cấu hình:
 
 Giữ các thiết lập còn lại theo mặc định và chọn **Create bucket**.
 
-![Tạo bucket báo cáo](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/4-create-report-bucket.png?featherlight=false&width=90pc)
+![Tạo bucket báo cáo](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/create-report-bucket.png?featherlight=false&width=90pc)
 
 ---
 
@@ -117,7 +117,7 @@ test-scripts/
 
 Các thư mục này lần lượt lưu kết quả JSON, báo cáo HTML, ảnh chụp khi kiểm thử và kịch bản kiểm thử.
 
-![Cấu trúc bucket báo cáo](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/5-report-bucket-objects.png?featherlight=false&width=90pc)
+![Cấu trúc bucket báo cáo](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/report-bucket-objects.png?featherlight=false&width=90pc)
 
 ---
 
@@ -130,6 +130,6 @@ playwright-webui-12
 playwright-report-2026
 ```
 
-![Xác nhận các bucket đã tạo](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/6-verify-buckets.png?featherlight=false&width=90pc)
+![Xác nhận các bucket đã tạo](/images/5-Workshop/5.2-Prerequisite/5.2.4-create-s3/verify-buckets.png?featherlight=false&width=90pc)
 
 Sau khi hoàn tất, bucket Web UI sẵn sàng cho bước cấu hình CloudFront và bucket báo cáo sẵn sàng để Lambda lưu kết quả kiểm thử.

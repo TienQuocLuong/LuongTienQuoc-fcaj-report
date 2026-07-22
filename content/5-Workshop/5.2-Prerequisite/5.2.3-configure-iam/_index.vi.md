@@ -11,7 +11,7 @@ pre : " <b> 5.2.3. </b> "
 Trong phần này, chúng ta sẽ tạo bốn IAM Role cho hệ thống kiểm thử Playwright:
 
 | IAM Role | Trusted service | Mục đích |
-|---|---|---|
+| --- | --- | --- |
 | `playwright-lambda-role` | AWS Lambda | Cho phép Lambda điều phối ECS và xử lý kết quả |
 | `playwright-postprocessing-role` | AWS Lambda | Role riêng cho Lambda `playwright-postprocessing`, tách biệt để kiểm soát quyền gọi Secrets Manager và SES chặt chẽ hơn |
 | `playwright-ecs-execution-role` | ECS Tasks | Cho phép ECS tải image từ ECR và ghi log |
@@ -69,7 +69,7 @@ Ngoài `playwright-lambda-role` dùng chung ở Bước 1, Lambda `playwright-po
 Tạo thêm một role mới, chọn:
 
 | Thuộc tính | Giá trị |
-|---|---|
+| --- | --- |
 | Trusted entity type | `AWS service` |
 | Service or use case | `Lambda` |
 
@@ -96,7 +96,7 @@ Kiểm tra trust policy có chứa service principal `lambda.amazonaws.com`, sau
 Tạo thêm một role khác và chọn:
 
 | Thuộc tính | Giá trị |
-|---|---|
+| --- | --- |
 | Trusted entity type | `AWS service` |
 | Service or use case | `Elastic Container Service` |
 | Use case | `Elastic Container Service Task` |
@@ -173,7 +173,7 @@ playwright-ecs-task-role
 Khi tạo ECS task definition ở bước sau, cấu hình:
 
 | Trường | IAM role |
-|---|---|
+| --- | --- |
 | Task execution role | `playwright-ecs-execution-role` |
 | Task role | `playwright-ecs-task-role` |
 
