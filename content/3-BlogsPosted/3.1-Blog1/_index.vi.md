@@ -49,9 +49,7 @@ AWS Secrets Manager là một giải pháp lưu trữ xuất sắc, nhưng GitGu
 
 Chi tiết về cấu hình và các bước thiết lập kỹ thuật, bạn có thể tham khảo thêm tại bài viết gốc trên AWS APN Blog: [aws.amazon.com/blogs/apn/unified-secrets-security-with-gitguardian-and-aws-secrets-manager](https://aws.amazon.com/vi/blogs/apn/unified-secrets-security-with-gitguardian-and-aws-secrets-manager/)
 
-{{% notice tip %}}
-Ảnh chụp bài đăng trên nhóm Facebook AWS Study Group để tại đây.
-{{% /notice %}}
+
 ![Facebook post screenshot](/images/3-Blogs/Blog-1.png)
 
 #AWS #AWSSecretsManager #GitGuardian #DevSecOps #CloudSecurity #NonHumanIdentity #NHI #CyberSecurity #BackendDevelopment #DevOpsVN

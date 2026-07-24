@@ -31,9 +31,7 @@ Ngoài ra có thể dùng qua MCP — nghĩa là tích hợp được vào các 
 
 Link bài viết gốc: [aws.amazon.com/blogs/aws/proactively-reduce-tech-debt-autonomously-with-aws-transform-continuous-modernization-preview](https://aws.amazon.com/vi/blogs/aws/proactively-reduce-tech-debt-autonomously-with-aws-transform-continuous-modernization-preview)
 
-{{% notice tip %}}
-Ảnh chụp bài đăng trên nhóm Facebook AWS Study Group để tại đây.
-{{% /notice %}}
+
 ![Facebook post screenshot](/images/3-Blogs/Blog-3.png)
 
 #AWS #AWSTransform #TechnicalDebt #DevOps #AIAgent #CloudModernization

@@ -46,9 +46,7 @@ However, since this is a solution within a closed ecosystem (Rapise's paid comme
 
 Original article link: [aws.amazon.com/blogs/apn/ai-powered-test-automation-with-rapise-and-amazon-bedrock](https://aws.amazon.com/vi/blogs/apn/ai-powered-test-automation-with-rapise-and-amazon-bedrock/)
 
-{{% notice tip %}}
-Screenshot of this post shared on the AWS Study Group Facebook group here.
-{{% /notice %}}
+
 ![Facebook post screenshot](/images/3-Blogs/Blog-2.png)
 
 #AWS #AmazonBedrock #Rapise #AutomationTest #QA #DevSecOps

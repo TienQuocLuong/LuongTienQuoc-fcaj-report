@@ -46,9 +46,7 @@ Tuy nhiên, vì đây là giải pháp thuộc hệ sinh thái đóng (mô hình
 
 Link bài viết gốc: [aws.amazon.com/blogs/apn/ai-powered-test-automation-with-rapise-and-amazon-bedrock](https://aws.amazon.com/vi/blogs/apn/ai-powered-test-automation-with-rapise-and-amazon-bedrock/)
 
-{{% notice tip %}}
-Ảnh chụp bài đăng trên nhóm Facebook AWS Study Group để tại đây.
-{{% /notice %}}
+
 ![Facebook post screenshot](/images/3-Blogs/Blog-2.png)
 
 #AWS #AmazonBedrock #Rapise #AutomationTest #QA #DevSecOps

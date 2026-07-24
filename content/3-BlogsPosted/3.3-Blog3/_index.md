@@ -31,9 +31,7 @@ It can also be used via MCP, meaning it can be integrated into an organization's
 
 Original article link: [aws.amazon.com/blogs/aws/proactively-reduce-tech-debt-autonomously-with-aws-transform-continuous-modernization-preview](https://aws.amazon.com/vi/blogs/aws/proactively-reduce-tech-debt-autonomously-with-aws-transform-continuous-modernization-preview)
 
-{{% notice tip %}}
-Screenshot of this post shared on the AWS Study Group Facebook group here.
-{{% /notice %}}
+
 ![Facebook post screenshot](/images/3-Blogs/Blog-3.png)
 
 #AWS #AWSTransform #TechnicalDebt #DevOps #AIAgent #CloudModernization

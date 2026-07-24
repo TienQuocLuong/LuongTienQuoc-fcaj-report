@@ -49,9 +49,7 @@ AWS Secrets Manager is an excellent storage solution, but GitGuardian is the mon
 
 For technical configuration details and setup steps, see the original article on the AWS APN Blog: [aws.amazon.com/blogs/apn/unified-secrets-security-with-gitguardian-and-aws-secrets-manager](https://aws.amazon.com/vi/blogs/apn/unified-secrets-security-with-gitguardian-and-aws-secrets-manager/)
 
-{{% notice tip %}}
-Screenshot of this post shared on the AWS Study Group Facebook group here.
-{{% /notice %}}
+
 ![Facebook post screenshot](/images/3-Blogs/Blog-1.png)
 
 #AWS #AWSSecretsManager #GitGuardian #DevSecOps #CloudSecurity #NonHumanIdentity #NHI #CyberSecurity #BackendDevelopment #DevOpsVN
